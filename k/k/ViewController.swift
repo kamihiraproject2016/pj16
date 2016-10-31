@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Kashiawase
+//  k
 //
-//  Created by mi-snow on 2016/10/29.
+//  Created by mi-snow on 2016/10/31.
 //  Copyright © 2016年 KamihiraProject. All rights reserved.
 //
 
@@ -12,15 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let button1 : UIButton = UIButton(type: UIButtonType.system)
-        button1.frame = CGRect(x: 100, y: 50, width: 200, height: 200)
-        button1.setTitle(NSLocalizedString("春", comment: ""), for: UIControlState.normal)
-        
-        self.view.addSubview(button1)
-        
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
