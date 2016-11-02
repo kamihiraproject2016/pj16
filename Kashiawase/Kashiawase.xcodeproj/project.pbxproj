@@ -7,64 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FDB65381DC97B6500D086D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB65371DC97B6500D086D5 /* AppDelegate.swift */; };
-		5FDB653A1DC97B6500D086D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB65391DC97B6500D086D5 /* ViewController.swift */; };
-		5FDB653D1DC97B6500D086D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB653B1DC97B6500D086D5 /* Main.storyboard */; };
-		5FDB653F1DC97B6500D086D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB653E1DC97B6500D086D5 /* Assets.xcassets */; };
-		5FDB65421DC97B6500D086D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB65401DC97B6500D086D5 /* LaunchScreen.storyboard */; };
-		5FDB654D1DC97B6500D086D5 /* KashiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB654C1DC97B6500D086D5 /* KashiawaseTests.swift */; };
-		5FDB65581DC97B6500D086D5 /* KashiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB65571DC97B6500D086D5 /* KashiawaseUITests.swift */; };
+		5FA160981DC98166006338EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160971DC98166006338EC /* AppDelegate.swift */; };
+		5FA1609A1DC98166006338EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160991DC98166006338EC /* ViewController.swift */; };
+		5FA1609D1DC98166006338EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609B1DC98166006338EC /* Main.storyboard */; };
+		5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609E1DC98166006338EC /* Assets.xcassets */; };
+		5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA160A01DC98166006338EC /* LaunchScreen.storyboard */; };
+		5FA160AD1DC98166006338EC /* KashiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160AC1DC98166006338EC /* KashiawaseTests.swift */; };
+		5FA160B81DC98166006338EC /* KashiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160B71DC98166006338EC /* KashiawaseUITests.swift */; };
+		5FA160C71DC9817E006338EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FA160C91DC9817E006338EC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5FDB65491DC97B6500D086D5 /* PBXContainerItemProxy */ = {
+		5FA160A91DC98166006338EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5FDB652C1DC97B6500D086D5 /* Project object */;
+			containerPortal = 5FA1608C1DC98166006338EC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5FDB65331DC97B6500D086D5;
+			remoteGlobalIDString = 5FA160931DC98166006338EC;
 			remoteInfo = Kashiawase;
 		};
-		5FDB65541DC97B6500D086D5 /* PBXContainerItemProxy */ = {
+		5FA160B41DC98166006338EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5FDB652C1DC97B6500D086D5 /* Project object */;
+			containerPortal = 5FA1608C1DC98166006338EC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5FDB65331DC97B6500D086D5;
+			remoteGlobalIDString = 5FA160931DC98166006338EC;
 			remoteInfo = Kashiawase;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5FDB65341DC97B6500D086D5 /* Kashiawase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kashiawase.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FDB65371DC97B6500D086D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FDB65391DC97B6500D086D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5FDB653C1DC97B6500D086D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5FDB653E1DC97B6500D086D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5FDB65411DC97B6500D086D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5FDB65431DC97B6500D086D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FDB65481DC97B6500D086D5 /* KashiawaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KashiawaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FDB654C1DC97B6500D086D5 /* KashiawaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashiawaseTests.swift; sourceTree = "<group>"; };
-		5FDB654E1DC97B6500D086D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FDB65531DC97B6500D086D5 /* KashiawaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KashiawaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FDB65571DC97B6500D086D5 /* KashiawaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashiawaseUITests.swift; sourceTree = "<group>"; };
-		5FDB65591DC97B6500D086D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA160941DC98166006338EC /* Kashiawase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kashiawase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA160971DC98166006338EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FA160991DC98166006338EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FA1609C1DC98166006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FA1609E1DC98166006338EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FA160A11DC98166006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FA160A31DC98166006338EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA160A81DC98166006338EC /* KashiawaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KashiawaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA160AC1DC98166006338EC /* KashiawaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashiawaseTests.swift; sourceTree = "<group>"; };
+		5FA160AE1DC98166006338EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA160B31DC98166006338EC /* KashiawaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KashiawaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA160B71DC98166006338EC /* KashiawaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashiawaseUITests.swift; sourceTree = "<group>"; };
+		5FA160B91DC98166006338EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA160C81DC9817E006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5FA160CA1DC98190006338EC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5FDB65311DC97B6500D086D5 /* Frameworks */ = {
+		5FA160911DC98166006338EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FDB65451DC97B6500D086D5 /* Frameworks */ = {
+		5FA160A51DC98166006338EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FDB65501DC97B6500D086D5 /* Frameworks */ = {
+		5FA160B01DC98166006338EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,53 +77,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5FDB652B1DC97B6500D086D5 = {
+		5FA1608B1DC98166006338EC = {
 			isa = PBXGroup;
 			children = (
-				5FDB65361DC97B6500D086D5 /* Kashiawase */,
-				5FDB654B1DC97B6500D086D5 /* KashiawaseTests */,
-				5FDB65561DC97B6500D086D5 /* KashiawaseUITests */,
-				5FDB65351DC97B6500D086D5 /* Products */,
+				5FA160961DC98166006338EC /* Kashiawase */,
+				5FA160AB1DC98166006338EC /* KashiawaseTests */,
+				5FA160B61DC98166006338EC /* KashiawaseUITests */,
+				5FA160951DC98166006338EC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5FDB65351DC97B6500D086D5 /* Products */ = {
+		5FA160951DC98166006338EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FDB65341DC97B6500D086D5 /* Kashiawase.app */,
-				5FDB65481DC97B6500D086D5 /* KashiawaseTests.xctest */,
-				5FDB65531DC97B6500D086D5 /* KashiawaseUITests.xctest */,
+				5FA160941DC98166006338EC /* Kashiawase.app */,
+				5FA160A81DC98166006338EC /* KashiawaseTests.xctest */,
+				5FA160B31DC98166006338EC /* KashiawaseUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5FDB65361DC97B6500D086D5 /* Kashiawase */ = {
+		5FA160961DC98166006338EC /* Kashiawase */ = {
 			isa = PBXGroup;
 			children = (
-				5FDB65371DC97B6500D086D5 /* AppDelegate.swift */,
-				5FDB65391DC97B6500D086D5 /* ViewController.swift */,
-				5FDB653B1DC97B6500D086D5 /* Main.storyboard */,
-				5FDB653E1DC97B6500D086D5 /* Assets.xcassets */,
-				5FDB65401DC97B6500D086D5 /* LaunchScreen.storyboard */,
-				5FDB65431DC97B6500D086D5 /* Info.plist */,
+				5FA160C91DC9817E006338EC /* Localizable.strings */,
+				5FA160971DC98166006338EC /* AppDelegate.swift */,
+				5FA160991DC98166006338EC /* ViewController.swift */,
+				5FA1609B1DC98166006338EC /* Main.storyboard */,
+				5FA1609E1DC98166006338EC /* Assets.xcassets */,
+				5FA160A01DC98166006338EC /* LaunchScreen.storyboard */,
+				5FA160A31DC98166006338EC /* Info.plist */,
 			);
 			path = Kashiawase;
 			sourceTree = "<group>";
 		};
-		5FDB654B1DC97B6500D086D5 /* KashiawaseTests */ = {
+		5FA160AB1DC98166006338EC /* KashiawaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				5FDB654C1DC97B6500D086D5 /* KashiawaseTests.swift */,
-				5FDB654E1DC97B6500D086D5 /* Info.plist */,
+				5FA160AC1DC98166006338EC /* KashiawaseTests.swift */,
+				5FA160AE1DC98166006338EC /* Info.plist */,
 			);
 			path = KashiawaseTests;
 			sourceTree = "<group>";
 		};
-		5FDB65561DC97B6500D086D5 /* KashiawaseUITests */ = {
+		5FA160B61DC98166006338EC /* KashiawaseUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5FDB65571DC97B6500D086D5 /* KashiawaseUITests.swift */,
-				5FDB65591DC97B6500D086D5 /* Info.plist */,
+				5FA160B71DC98166006338EC /* KashiawaseUITests.swift */,
+				5FA160B91DC98166006338EC /* Info.plist */,
 			);
 			path = KashiawaseUITests;
 			sourceTree = "<group>";
@@ -128,13 +132,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5FDB65331DC97B6500D086D5 /* Kashiawase */ = {
+		5FA160931DC98166006338EC /* Kashiawase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FDB655C1DC97B6500D086D5 /* Build configuration list for PBXNativeTarget "Kashiawase" */;
+			buildConfigurationList = 5FA160BC1DC98166006338EC /* Build configuration list for PBXNativeTarget "Kashiawase" */;
 			buildPhases = (
-				5FDB65301DC97B6500D086D5 /* Sources */,
-				5FDB65311DC97B6500D086D5 /* Frameworks */,
-				5FDB65321DC97B6500D086D5 /* Resources */,
+				5FA160901DC98166006338EC /* Sources */,
+				5FA160911DC98166006338EC /* Frameworks */,
+				5FA160921DC98166006338EC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,69 +146,69 @@
 			);
 			name = Kashiawase;
 			productName = Kashiawase;
-			productReference = 5FDB65341DC97B6500D086D5 /* Kashiawase.app */;
+			productReference = 5FA160941DC98166006338EC /* Kashiawase.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5FDB65471DC97B6500D086D5 /* KashiawaseTests */ = {
+		5FA160A71DC98166006338EC /* KashiawaseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FDB655F1DC97B6500D086D5 /* Build configuration list for PBXNativeTarget "KashiawaseTests" */;
+			buildConfigurationList = 5FA160BF1DC98166006338EC /* Build configuration list for PBXNativeTarget "KashiawaseTests" */;
 			buildPhases = (
-				5FDB65441DC97B6500D086D5 /* Sources */,
-				5FDB65451DC97B6500D086D5 /* Frameworks */,
-				5FDB65461DC97B6500D086D5 /* Resources */,
+				5FA160A41DC98166006338EC /* Sources */,
+				5FA160A51DC98166006338EC /* Frameworks */,
+				5FA160A61DC98166006338EC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FDB654A1DC97B6500D086D5 /* PBXTargetDependency */,
+				5FA160AA1DC98166006338EC /* PBXTargetDependency */,
 			);
 			name = KashiawaseTests;
 			productName = KashiawaseTests;
-			productReference = 5FDB65481DC97B6500D086D5 /* KashiawaseTests.xctest */;
+			productReference = 5FA160A81DC98166006338EC /* KashiawaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5FDB65521DC97B6500D086D5 /* KashiawaseUITests */ = {
+		5FA160B21DC98166006338EC /* KashiawaseUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FDB65621DC97B6500D086D5 /* Build configuration list for PBXNativeTarget "KashiawaseUITests" */;
+			buildConfigurationList = 5FA160C21DC98166006338EC /* Build configuration list for PBXNativeTarget "KashiawaseUITests" */;
 			buildPhases = (
-				5FDB654F1DC97B6500D086D5 /* Sources */,
-				5FDB65501DC97B6500D086D5 /* Frameworks */,
-				5FDB65511DC97B6500D086D5 /* Resources */,
+				5FA160AF1DC98166006338EC /* Sources */,
+				5FA160B01DC98166006338EC /* Frameworks */,
+				5FA160B11DC98166006338EC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FDB65551DC97B6500D086D5 /* PBXTargetDependency */,
+				5FA160B51DC98166006338EC /* PBXTargetDependency */,
 			);
 			name = KashiawaseUITests;
 			productName = KashiawaseUITests;
-			productReference = 5FDB65531DC97B6500D086D5 /* KashiawaseUITests.xctest */;
+			productReference = 5FA160B31DC98166006338EC /* KashiawaseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5FDB652C1DC97B6500D086D5 /* Project object */ = {
+		5FA1608C1DC98166006338EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = KamihiraProject;
 				TargetAttributes = {
-					5FDB65331DC97B6500D086D5 = {
+					5FA160931DC98166006338EC = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					5FDB65471DC97B6500D086D5 = {
+					5FA160A71DC98166006338EC = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 5FDB65331DC97B6500D086D5;
+						TestTargetID = 5FA160931DC98166006338EC;
 					};
-					5FDB65521DC97B6500D086D5 = {
+					5FA160B21DC98166006338EC = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 5FDB65331DC97B6500D086D5;
+						TestTargetID = 5FA160931DC98166006338EC;
 					};
 				};
 			};
-			buildConfigurationList = 5FDB652F1DC97B6500D086D5 /* Build configuration list for PBXProject "Kashiawase" */;
+			buildConfigurationList = 5FA1608F1DC98166006338EC /* Build configuration list for PBXProject "Kashiawase" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,37 +216,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 5FDB652B1DC97B6500D086D5;
-			productRefGroup = 5FDB65351DC97B6500D086D5 /* Products */;
+			mainGroup = 5FA1608B1DC98166006338EC;
+			productRefGroup = 5FA160951DC98166006338EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5FDB65331DC97B6500D086D5 /* Kashiawase */,
-				5FDB65471DC97B6500D086D5 /* KashiawaseTests */,
-				5FDB65521DC97B6500D086D5 /* KashiawaseUITests */,
+				5FA160931DC98166006338EC /* Kashiawase */,
+				5FA160A71DC98166006338EC /* KashiawaseTests */,
+				5FA160B21DC98166006338EC /* KashiawaseUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5FDB65321DC97B6500D086D5 /* Resources */ = {
+		5FA160921DC98166006338EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDB65421DC97B6500D086D5 /* LaunchScreen.storyboard in Resources */,
-				5FDB653F1DC97B6500D086D5 /* Assets.xcassets in Resources */,
-				5FDB653D1DC97B6500D086D5 /* Main.storyboard in Resources */,
+				5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */,
+				5FA160C71DC9817E006338EC /* Localizable.strings in Resources */,
+				5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */,
+				5FA1609D1DC98166006338EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FDB65461DC97B6500D086D5 /* Resources */ = {
+		5FA160A61DC98166006338EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FDB65511DC97B6500D086D5 /* Resources */ = {
+		5FA160B11DC98166006338EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,67 +257,77 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5FDB65301DC97B6500D086D5 /* Sources */ = {
+		5FA160901DC98166006338EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDB653A1DC97B6500D086D5 /* ViewController.swift in Sources */,
-				5FDB65381DC97B6500D086D5 /* AppDelegate.swift in Sources */,
+				5FA1609A1DC98166006338EC /* ViewController.swift in Sources */,
+				5FA160981DC98166006338EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FDB65441DC97B6500D086D5 /* Sources */ = {
+		5FA160A41DC98166006338EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDB654D1DC97B6500D086D5 /* KashiawaseTests.swift in Sources */,
+				5FA160AD1DC98166006338EC /* KashiawaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FDB654F1DC97B6500D086D5 /* Sources */ = {
+		5FA160AF1DC98166006338EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDB65581DC97B6500D086D5 /* KashiawaseUITests.swift in Sources */,
+				5FA160B81DC98166006338EC /* KashiawaseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5FDB654A1DC97B6500D086D5 /* PBXTargetDependency */ = {
+		5FA160AA1DC98166006338EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5FDB65331DC97B6500D086D5 /* Kashiawase */;
-			targetProxy = 5FDB65491DC97B6500D086D5 /* PBXContainerItemProxy */;
+			target = 5FA160931DC98166006338EC /* Kashiawase */;
+			targetProxy = 5FA160A91DC98166006338EC /* PBXContainerItemProxy */;
 		};
-		5FDB65551DC97B6500D086D5 /* PBXTargetDependency */ = {
+		5FA160B51DC98166006338EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5FDB65331DC97B6500D086D5 /* Kashiawase */;
-			targetProxy = 5FDB65541DC97B6500D086D5 /* PBXContainerItemProxy */;
+			target = 5FA160931DC98166006338EC /* Kashiawase */;
+			targetProxy = 5FA160B41DC98166006338EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5FDB653B1DC97B6500D086D5 /* Main.storyboard */ = {
+		5FA1609B1DC98166006338EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5FDB653C1DC97B6500D086D5 /* Base */,
+				5FA1609C1DC98166006338EC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5FDB65401DC97B6500D086D5 /* LaunchScreen.storyboard */ = {
+		5FA160A01DC98166006338EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5FDB65411DC97B6500D086D5 /* Base */,
+				5FA160A11DC98166006338EC /* Base */,
+				5FA160CA1DC98190006338EC /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5FA160C91DC9817E006338EC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FA160C81DC9817E006338EC /* Base */,
+			);
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5FDB655A1DC97B6500D086D5 /* Debug */ = {
+		5FA160BA1DC98166006338EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -356,7 +371,7 @@
 			};
 			name = Debug;
 		};
-		5FDB655B1DC97B6500D086D5 /* Release */ = {
+		5FA160BB1DC98166006338EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -393,7 +408,7 @@
 			};
 			name = Release;
 		};
-		5FDB655D1DC97B6500D086D5 /* Debug */ = {
+		5FA160BD1DC98166006338EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -404,7 +419,7 @@
 			};
 			name = Debug;
 		};
-		5FDB655E1DC97B6500D086D5 /* Release */ = {
+		5FA160BE1DC98166006338EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -415,7 +430,7 @@
 			};
 			name = Release;
 		};
-		5FDB65601DC97B6500D086D5 /* Debug */ = {
+		5FA160C01DC98166006338EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -427,7 +442,7 @@
 			};
 			name = Debug;
 		};
-		5FDB65611DC97B6500D086D5 /* Release */ = {
+		5FA160C11DC98166006338EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -439,7 +454,7 @@
 			};
 			name = Release;
 		};
-		5FDB65631DC97B6500D086D5 /* Debug */ = {
+		5FA160C31DC98166006338EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = KashiawaseUITests/Info.plist;
@@ -451,7 +466,7 @@
 			};
 			name = Debug;
 		};
-		5FDB65641DC97B6500D086D5 /* Release */ = {
+		5FA160C41DC98166006338EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = KashiawaseUITests/Info.plist;
@@ -466,40 +481,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5FDB652F1DC97B6500D086D5 /* Build configuration list for PBXProject "Kashiawase" */ = {
+		5FA1608F1DC98166006338EC /* Build configuration list for PBXProject "Kashiawase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FDB655A1DC97B6500D086D5 /* Debug */,
-				5FDB655B1DC97B6500D086D5 /* Release */,
+				5FA160BA1DC98166006338EC /* Debug */,
+				5FA160BB1DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5FDB655C1DC97B6500D086D5 /* Build configuration list for PBXNativeTarget "Kashiawase" */ = {
+		5FA160BC1DC98166006338EC /* Build configuration list for PBXNativeTarget "Kashiawase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FDB655D1DC97B6500D086D5 /* Debug */,
-				5FDB655E1DC97B6500D086D5 /* Release */,
+				5FA160BD1DC98166006338EC /* Debug */,
+				5FA160BE1DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		5FDB655F1DC97B6500D086D5 /* Build configuration list for PBXNativeTarget "KashiawaseTests" */ = {
+		5FA160BF1DC98166006338EC /* Build configuration list for PBXNativeTarget "KashiawaseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FDB65601DC97B6500D086D5 /* Debug */,
-				5FDB65611DC97B6500D086D5 /* Release */,
+				5FA160C01DC98166006338EC /* Debug */,
+				5FA160C11DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		5FDB65621DC97B6500D086D5 /* Build configuration list for PBXNativeTarget "KashiawaseUITests" */ = {
+		5FA160C21DC98166006338EC /* Build configuration list for PBXNativeTarget "KashiawaseUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FDB65631DC97B6500D086D5 /* Debug */,
-				5FDB65641DC97B6500D086D5 /* Release */,
+				5FA160C31DC98166006338EC /* Debug */,
+				5FA160C41DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5FDB652C1DC97B6500D086D5 /* Project object */;
+	rootObject = 5FA1608C1DC98166006338EC /* Project object */;
 }
