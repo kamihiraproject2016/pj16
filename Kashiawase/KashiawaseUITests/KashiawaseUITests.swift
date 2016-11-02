@@ -2,7 +2,7 @@
 //  KashiawaseUITests.swift
 //  KashiawaseUITests
 //
-//  Created by mi-snow on 2016/10/29.
+//  Created by mi-snow on 2016/11/02.
 //  Copyright © 2016年 KamihiraProject. All rights reserved.
 //
 
