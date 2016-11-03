@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5FA160981DC98166006338EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160971DC98166006338EC /* AppDelegate.swift */; };
-		5FA1609A1DC98166006338EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160991DC98166006338EC /* ViewController.swift */; };
+		5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160991DC98166006338EC /* TopViewController.swift */; };
 		5FA1609D1DC98166006338EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609B1DC98166006338EC /* Main.storyboard */; };
 		5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609E1DC98166006338EC /* Assets.xcassets */; };
 		5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA160A01DC98166006338EC /* LaunchScreen.storyboard */; };
 		5FA160AD1DC98166006338EC /* KashiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160AC1DC98166006338EC /* KashiawaseTests.swift */; };
 		5FA160B81DC98166006338EC /* KashiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160B71DC98166006338EC /* KashiawaseUITests.swift */; };
 		5FA160C71DC9817E006338EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FA160C91DC9817E006338EC /* Localizable.strings */; };
+		5FF08ADD1DC9A6360024AE3A /* light02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FF08ADC1DC9A6360024AE3A /* light02.jpg */; };
+		5FF08ADF1DC9AE770024AE3A /* light02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF08ADE1DC9AE770024AE3A /* light02.png */; };
+		5FF08AE31DC9BDD60024AE3A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF08AE21DC9BDD60024AE3A /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		5FA160941DC98166006338EC /* Kashiawase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kashiawase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA160971DC98166006338EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FA160991DC98166006338EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FA160991DC98166006338EC /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		5FA1609C1DC98166006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FA1609E1DC98166006338EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FA160A11DC98166006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		5FA160B91DC98166006338EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA160C81DC9817E006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5FA160CA1DC98190006338EC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5FF08ADC1DC9A6360024AE3A /* light02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light02.jpg; sourceTree = "<group>"; };
+		5FF08ADE1DC9AE770024AE3A /* light02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light02.png; sourceTree = "<group>"; };
+		5FF08AE21DC9BDD60024AE3A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,10 @@
 			children = (
 				5FA160C91DC9817E006338EC /* Localizable.strings */,
 				5FA160971DC98166006338EC /* AppDelegate.swift */,
-				5FA160991DC98166006338EC /* ViewController.swift */,
+				5FF08ADC1DC9A6360024AE3A /* light02.jpg */,
+				5FF08AE21DC9BDD60024AE3A /* logo.png */,
+				5FF08ADE1DC9AE770024AE3A /* light02.png */,
+				5FA160991DC98166006338EC /* TopViewController.swift */,
 				5FA1609B1DC98166006338EC /* Main.storyboard */,
 				5FA1609E1DC98166006338EC /* Assets.xcassets */,
 				5FA160A01DC98166006338EC /* LaunchScreen.storyboard */,
@@ -233,10 +242,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF08ADF1DC9AE770024AE3A /* light02.png in Resources */,
 				5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */,
 				5FA160C71DC9817E006338EC /* Localizable.strings in Resources */,
 				5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */,
+				5FF08AE31DC9BDD60024AE3A /* logo.png in Resources */,
 				5FA1609D1DC98166006338EC /* Main.storyboard in Resources */,
+				5FF08ADD1DC9A6360024AE3A /* light02.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA1609A1DC98166006338EC /* ViewController.swift in Sources */,
+				5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */,
 				5FA160981DC98166006338EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +509,7 @@
 				5FA160BE1DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5FA160BF1DC98166006338EC /* Build configuration list for PBXNativeTarget "KashiawaseTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +518,7 @@
 				5FA160C11DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5FA160C21DC98166006338EC /* Build configuration list for PBXNativeTarget "KashiawaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +527,7 @@
 				5FA160C41DC98166006338EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
