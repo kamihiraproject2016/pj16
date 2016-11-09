@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FA160931DC98166006338EC"
-               BuildableName = "Kashiawase.app"
-               BlueprintName = "Kashiawase"
-               ReferencedContainer = "container:Kashiawase.xcodeproj">
+               BlueprintIdentifier = "5F63E17A1DC6E34700331CA4"
+               BuildableName = "k.app"
+               BlueprintName = "k"
+               ReferencedContainer = "container:k.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FA160A71DC98166006338EC"
-               BuildableName = "KashiawaseTests.xctest"
-               BlueprintName = "KashiawaseTests"
-               ReferencedContainer = "container:Kashiawase.xcodeproj">
+               BlueprintIdentifier = "5F63E18E1DC6E34800331CA4"
+               BuildableName = "kTests.xctest"
+               BlueprintName = "kTests"
+               ReferencedContainer = "container:k.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FA160B21DC98166006338EC"
-               BuildableName = "KashiawaseUITests.xctest"
-               BlueprintName = "KashiawaseUITests"
-               ReferencedContainer = "container:Kashiawase.xcodeproj">
+               BlueprintIdentifier = "5F63E1991DC6E34800331CA4"
+               BuildableName = "kUITests.xctest"
+               BlueprintName = "kUITests"
+               ReferencedContainer = "container:k.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5FA160931DC98166006338EC"
-            BuildableName = "Kashiawase.app"
-            BlueprintName = "Kashiawase"
-            ReferencedContainer = "container:Kashiawase.xcodeproj">
+            BlueprintIdentifier = "5F63E17A1DC6E34700331CA4"
+            BuildableName = "k.app"
+            BlueprintName = "k"
+            ReferencedContainer = "container:k.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5FA160931DC98166006338EC"
-            BuildableName = "Kashiawase.app"
-            BlueprintName = "Kashiawase"
-            ReferencedContainer = "container:Kashiawase.xcodeproj">
+            BlueprintIdentifier = "5F63E17A1DC6E34700331CA4"
+            BuildableName = "k.app"
+            BlueprintName = "k"
+            ReferencedContainer = "container:k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5FA160931DC98166006338EC"
-            BuildableName = "Kashiawase.app"
-            BlueprintName = "Kashiawase"
-            ReferencedContainer = "container:Kashiawase.xcodeproj">
+            BlueprintIdentifier = "5F63E17A1DC6E34700331CA4"
+            BuildableName = "k.app"
+            BlueprintName = "k"
+            ReferencedContainer = "container:k.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

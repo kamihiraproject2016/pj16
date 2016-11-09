@@ -1,14 +1,14 @@
 //
-//  KashiawaseUITests.swift
-//  KashiawaseUITests
+//  kUITests.swift
+//  kUITests
 //
-//  Created by mi-snow on 2016/11/02.
+//  Created by mi-snow on 2016/10/31.
 //  Copyright © 2016年 KamihiraProject. All rights reserved.
 //
 
 import XCTest
 
-class KashiawaseUITests: XCTestCase {
+class kUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

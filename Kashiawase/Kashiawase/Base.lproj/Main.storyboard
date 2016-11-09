@@ -1,26 +1,195 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eb0-kg-5sN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Top View Controller-->
+        <scene sceneID="GDc-Jg-Bcd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eb0-kg-5sN" customClass="TopViewController" customModule="Kashiawase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Ld2-TP-Gqu"/>
+                        <viewControllerLayoutGuide type="bottom" id="DFw-Ga-Xka"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="Cya-UF-7bD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPF-wW-8mG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8FA-xy-Hyn">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="かしあわせ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-VP-1TK">
+                                                <rect key="frame" x="258" y="20" width="85" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Fq0-HC-XhM">
+                                                <rect key="frame" x="16" y="51" width="568" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="i4G-Vk-5Xb"/>
+                                                </constraints>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="eb0-kg-5sN" id="GaE-re-4FI"/>
+                                                </connections>
+                                            </searchBar>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti1-nc-6OZ">
+                                                <rect key="frame" x="16" y="105" width="568" height="1152"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F08-9k-QzU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="278" height="371"/>
+                                                        <color key="backgroundColor" red="0.62263100719999998" green="1" blue="0.76793893729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="F08-9k-QzU" secondAttribute="height" multiplier="3:4" id="DyN-dy-b9H"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="logo.png">
+                                                            <string key="title">春のカード
+Spring</string>
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sGF-0u-vSF">
+                                                        <rect key="frame" x="290" y="0.0" width="278" height="371"/>
+                                                        <color key="backgroundColor" red="0.62263100719999998" green="1" blue="0.76793893729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="sGF-0u-vSF" secondAttribute="height" multiplier="3:4" id="dAB-qY-Tw8"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="logo.png">
+                                                            <string key="title">夏のカード
+Summer</string>
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-Z8-hIh">
+                                                        <rect key="frame" x="0.0" y="384" width="278" height="371"/>
+                                                        <color key="backgroundColor" red="0.62263100719999998" green="1" blue="0.76793893729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="IVQ-Z8-hIh" secondAttribute="height" multiplier="3:4" id="vFu-DX-tNT"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="logo.png">
+                                                            <string key="title">秋のカード
+Autumn</string>
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uR1-HW-wet">
+                                                        <rect key="frame" x="0.0" y="771" width="278" height="371"/>
+                                                        <color key="backgroundColor" red="0.62263100719999998" green="1" blue="0.76793893729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="uR1-HW-wet" secondAttribute="height" multiplier="3:4" id="Adw-B0-6av"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="logo.png">
+                                                            <string key="title">通年のカード
+All year</string>
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-p7-gyL">
+                                                        <rect key="frame" x="290" y="384" width="278" height="371"/>
+                                                        <color key="backgroundColor" red="0.62263100719999998" green="1" blue="0.76793893729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="diJ-p7-gyL" secondAttribute="height" multiplier="3:4" id="KRz-nM-q7g"/>
+                                                        </constraints>
+                                                        <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="logo.png">
+                                                            <string key="title">冬のカード
+Winter</string>
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="F08-9k-QzU" firstAttribute="width" secondItem="ti1-nc-6OZ" secondAttribute="width" multiplier="0.49" id="2S7-AE-o0u"/>
+                                                    <constraint firstItem="F08-9k-QzU" firstAttribute="leading" secondItem="ti1-nc-6OZ" secondAttribute="leading" id="5oT-pB-e1O"/>
+                                                    <constraint firstItem="F08-9k-QzU" firstAttribute="top" secondItem="ti1-nc-6OZ" secondAttribute="top" id="Cgo-fP-3qV"/>
+                                                    <constraint firstItem="IVQ-Z8-hIh" firstAttribute="top" secondItem="F08-9k-QzU" secondAttribute="bottom" constant="13" id="Hd4-ji-Yt8"/>
+                                                    <constraint firstItem="sGF-0u-vSF" firstAttribute="top" secondItem="ti1-nc-6OZ" secondAttribute="top" id="I1k-4B-sFK"/>
+                                                    <constraint firstItem="sGF-0u-vSF" firstAttribute="width" secondItem="ti1-nc-6OZ" secondAttribute="width" multiplier="0.49" id="Mha-g5-eeP"/>
+                                                    <constraint firstItem="IVQ-Z8-hIh" firstAttribute="width" secondItem="ti1-nc-6OZ" secondAttribute="width" multiplier="0.49" id="NxS-20-Olc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="diJ-p7-gyL" secondAttribute="trailing" id="Rla-vL-Ffi"/>
+                                                    <constraint firstItem="uR1-HW-wet" firstAttribute="top" secondItem="IVQ-Z8-hIh" secondAttribute="bottom" constant="16" id="VqV-T4-hYb"/>
+                                                    <constraint firstItem="diJ-p7-gyL" firstAttribute="width" secondItem="ti1-nc-6OZ" secondAttribute="width" multiplier="0.49" id="aiM-e6-uDR"/>
+                                                    <constraint firstItem="uR1-HW-wet" firstAttribute="leading" secondItem="ti1-nc-6OZ" secondAttribute="leading" id="doq-5A-KgG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uR1-HW-wet" secondAttribute="bottom" constant="10" id="fiw-Qs-ftG"/>
+                                                    <constraint firstItem="diJ-p7-gyL" firstAttribute="top" secondItem="sGF-0u-vSF" secondAttribute="bottom" constant="13" id="kpC-oA-eKl"/>
+                                                    <constraint firstItem="IVQ-Z8-hIh" firstAttribute="leading" secondItem="ti1-nc-6OZ" secondAttribute="leading" id="lqf-Rg-5lP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sGF-0u-vSF" secondAttribute="trailing" id="pPL-LM-XN8"/>
+                                                    <constraint firstItem="uR1-HW-wet" firstAttribute="width" secondItem="ti1-nc-6OZ" secondAttribute="width" multiplier="0.49" id="yRU-WI-4Nf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="KQo-VP-1TK" firstAttribute="top" secondItem="8FA-xy-Hyn" secondAttribute="top" constant="20" id="5Hl-qU-dEQ"/>
+                                            <constraint firstAttribute="width" constant="600" id="5VK-Ob-3hM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ti1-nc-6OZ" secondAttribute="trailing" constant="8" id="7Pn-US-eLi"/>
+                                            <constraint firstItem="Fq0-HC-XhM" firstAttribute="top" secondItem="KQo-VP-1TK" secondAttribute="bottom" constant="10" id="BcA-8D-DmJ"/>
+                                            <constraint firstItem="ti1-nc-6OZ" firstAttribute="leading" secondItem="8FA-xy-Hyn" secondAttribute="leadingMargin" constant="8" id="F7z-m0-3rW"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Fq0-HC-XhM" secondAttribute="trailing" constant="8" id="TjO-i7-k10"/>
+                                            <constraint firstItem="KQo-VP-1TK" firstAttribute="centerX" secondItem="8FA-xy-Hyn" secondAttribute="centerX" id="Ucs-4S-JaV"/>
+                                            <constraint firstItem="Fq0-HC-XhM" firstAttribute="leading" secondItem="8FA-xy-Hyn" secondAttribute="leadingMargin" constant="8" id="iYa-X1-fL6"/>
+                                            <constraint firstAttribute="bottom" secondItem="ti1-nc-6OZ" secondAttribute="bottom" id="kkw-i1-Izu"/>
+                                            <constraint firstItem="ti1-nc-6OZ" firstAttribute="top" secondItem="Fq0-HC-XhM" secondAttribute="bottom" constant="10" id="tL7-ZF-pyF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8FA-xy-Hyn" secondAttribute="trailing" id="1tJ-iC-52f"/>
+                                    <constraint firstAttribute="bottom" secondItem="8FA-xy-Hyn" secondAttribute="bottom" id="HuV-dM-g88"/>
+                                    <constraint firstItem="8FA-xy-Hyn" firstAttribute="top" secondItem="MPF-wW-8mG" secondAttribute="top" id="aFA-wB-PqL"/>
+                                    <constraint firstItem="8FA-xy-Hyn" firstAttribute="leading" secondItem="MPF-wW-8mG" secondAttribute="leading" id="sMR-7L-mDV"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DFw-Ga-Xka" firstAttribute="top" secondItem="MPF-wW-8mG" secondAttribute="bottom" id="3N8-7o-eWD"/>
+                            <constraint firstItem="MPF-wW-8mG" firstAttribute="leading" secondItem="Cya-UF-7bD" secondAttribute="leading" id="9K6-ss-rhC"/>
+                            <constraint firstItem="8FA-xy-Hyn" firstAttribute="width" secondItem="Cya-UF-7bD" secondAttribute="width" id="OQN-qF-y4p"/>
+                            <constraint firstItem="MPF-wW-8mG" firstAttribute="top" secondItem="Cya-UF-7bD" secondAttribute="top" id="bGX-oH-Mbj"/>
+                            <constraint firstAttribute="trailing" secondItem="MPF-wW-8mG" secondAttribute="trailing" id="j9F-cT-WV2"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1200"/>
+                    <connections>
+                        <outlet property="allSeasonsBtn" destination="uR1-HW-wet" id="CoU-HT-o9Z"/>
+                        <outlet property="autumnBtn" destination="IVQ-Z8-hIh" id="4jL-ZH-nQt"/>
+                        <outlet property="searchDisplayController" destination="Pjr-Je-73w" id="haB-u9-kfm"/>
+                        <outlet property="springBtn" destination="F08-9k-QzU" id="qgD-yy-Nic"/>
+                        <outlet property="summerBtn" destination="sGF-0u-vSF" id="5ck-pA-CWI"/>
+                        <outlet property="winterBtn" destination="diJ-p7-gyL" id="1bI-Pm-sHs"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnq-JW-yRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Pjr-Je-73w">
+                    <connections>
+                        <outlet property="delegate" destination="eb0-kg-5sN" id="WXQ-zA-s6Q"/>
+                        <outlet property="searchBar" destination="Fq0-HC-XhM" id="Ziy-1l-LIY"/>
+                        <outlet property="searchContentsController" destination="eb0-kg-5sN" id="h2b-79-hcQ"/>
+                        <outlet property="searchResultsDataSource" destination="eb0-kg-5sN" id="sQK-5A-ike"/>
+                        <outlet property="searchResultsDelegate" destination="eb0-kg-5sN" id="oIg-SU-4K1"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="1141" y="235"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="150" height="151"/>
+    </resources>
 </document>
