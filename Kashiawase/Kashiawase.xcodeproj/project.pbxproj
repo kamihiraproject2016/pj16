@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2436401DDB288C00EF47D6 /* EnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */; };
+		5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */; };
 		5FA160981DC98166006338EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160971DC98166006338EC /* AppDelegate.swift */; };
 		5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160991DC98166006338EC /* TopViewController.swift */; };
 		5FA1609D1DC98166006338EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609B1DC98166006338EC /* Main.storyboard */; };
@@ -15,8 +17,15 @@
 		5FA160AD1DC98166006338EC /* KashiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160AC1DC98166006338EC /* KashiawaseTests.swift */; };
 		5FA160B81DC98166006338EC /* KashiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160B71DC98166006338EC /* KashiawaseUITests.swift */; };
 		5FA160C71DC9817E006338EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FA160C91DC9817E006338EC /* Localizable.strings */; };
-		5FF08ADD1DC9A6360024AE3A /* light02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FF08ADC1DC9A6360024AE3A /* light02.jpg */; };
-		5FF08ADF1DC9AE770024AE3A /* light02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF08ADE1DC9AE770024AE3A /* light02.png */; };
+		5FA2CBC11DD99BF300DDD19A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */; };
+		5FA2CBC31DD99C0200DDD19A /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA2CBC21DD99C0200DDD19A /* SwiftData.swift */; };
+		5FA2CBC61DD9A3CE00DDD19A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA2CBC51DD9A3CE00DDD19A /* StringExtensions.swift */; };
+		5FA4EF121DD8AF4B0085A6D7 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4EF111DD8AF4B0085A6D7 /* card.swift */; };
+		5FAD5EDB1DD9430600277728 /* dataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD5EDA1DD9430600277728 /* dataBase.swift */; };
+		5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */; };
+		5FC633771DDAA17600C5100A /* あんみつ.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC633761DDAA17600C5100A /* あんみつ.png */; };
+		5FC633791DDAC2B500C5100A /* あんみつmin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC633781DDAC2B500C5100A /* あんみつmin.png */; };
+		5FC6337B1DDADE7800C5100A /* JpnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */; };
 		5FF08AE31DC9BDD60024AE3A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF08AE21DC9BDD60024AE3A /* logo.png */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnDetailViewController.swift; sourceTree = "<group>"; };
+		5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5FA160941DC98166006338EC /* Kashiawase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kashiawase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA160971DC98166006338EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA160991DC98166006338EC /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -53,8 +64,16 @@
 		5FA160B91DC98166006338EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA160C81DC9817E006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5FA160CA1DC98190006338EC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		5FF08ADC1DC9A6360024AE3A /* light02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light02.jpg; sourceTree = "<group>"; };
-		5FF08ADE1DC9AE770024AE3A /* light02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light02.png; sourceTree = "<group>"; };
+		5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5FA2CBC21DD99C0200DDD19A /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftData.swift; sourceTree = "<group>"; };
+		5FA2CBC41DD99D2C00DDD19A /* Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briding-Header.h"; sourceTree = "<group>"; };
+		5FA2CBC51DD9A3CE00DDD19A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		5FA4EF111DD8AF4B0085A6D7 /* card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
+		5FAD5EDA1DD9430600277728 /* dataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataBase.swift; sourceTree = "<group>"; };
+		5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		5FC633761DDAA17600C5100A /* あんみつ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "あんみつ.png"; sourceTree = "<group>"; };
+		5FC633781DDAC2B500C5100A /* あんみつmin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "あんみつmin.png"; sourceTree = "<group>"; };
+		5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnDetailViewController.swift; sourceTree = "<group>"; };
 		5FF08AE21DC9BDD60024AE3A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA2CBC11DD99BF300DDD19A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +106,9 @@
 		5FA1608B1DC98166006338EC = {
 			isa = PBXGroup;
 			children = (
+				5FA2CBC41DD99D2C00DDD19A /* Briding-Header.h */,
+				5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */,
+				5FA2CBC21DD99C0200DDD19A /* SwiftData.swift */,
 				5FA160961DC98166006338EC /* Kashiawase */,
 				5FA160AB1DC98166006338EC /* KashiawaseTests */,
 				5FA160B61DC98166006338EC /* KashiawaseUITests */,
@@ -106,14 +129,21 @@
 		5FA160961DC98166006338EC /* Kashiawase */ = {
 			isa = PBXGroup;
 			children = (
+				5FA2CBC51DD9A3CE00DDD19A /* StringExtensions.swift */,
+				5FAD5EDA1DD9430600277728 /* dataBase.swift */,
 				5FA160C91DC9817E006338EC /* Localizable.strings */,
 				5FA160971DC98166006338EC /* AppDelegate.swift */,
-				5FF08ADC1DC9A6360024AE3A /* light02.jpg */,
+				5FC633781DDAC2B500C5100A /* あんみつmin.png */,
+				5FC633761DDAA17600C5100A /* あんみつ.png */,
 				5FF08AE21DC9BDD60024AE3A /* logo.png */,
-				5FF08ADE1DC9AE770024AE3A /* light02.png */,
-				5FA160991DC98166006338EC /* TopViewController.swift */,
 				5FA1609B1DC98166006338EC /* Main.storyboard */,
+				5FA160991DC98166006338EC /* TopViewController.swift */,
+				5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */,
+				5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */,
+				5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */,
+				5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */,
 				5FA1609E1DC98166006338EC /* Assets.xcassets */,
+				5FA4EF111DD8AF4B0085A6D7 /* card.swift */,
 				5FA160A01DC98166006338EC /* LaunchScreen.storyboard */,
 				5FA160A31DC98166006338EC /* Info.plist */,
 			);
@@ -242,13 +272,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF08ADF1DC9AE770024AE3A /* light02.png in Resources */,
 				5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */,
 				5FA160C71DC9817E006338EC /* Localizable.strings in Resources */,
 				5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */,
+				5FC633771DDAA17600C5100A /* あんみつ.png in Resources */,
 				5FF08AE31DC9BDD60024AE3A /* logo.png in Resources */,
+				5FC633791DDAC2B500C5100A /* あんみつmin.png in Resources */,
 				5FA1609D1DC98166006338EC /* Main.storyboard in Resources */,
-				5FF08ADD1DC9A6360024AE3A /* light02.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA2CBC61DD9A3CE00DDD19A /* StringExtensions.swift in Sources */,
 				5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */,
 				5FA160981DC98166006338EC /* AppDelegate.swift in Sources */,
+				5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */,
+				5F2436401DDB288C00EF47D6 /* EnDetailViewController.swift in Sources */,
+				5FA4EF121DD8AF4B0085A6D7 /* card.swift in Sources */,
+				5FAD5EDB1DD9430600277728 /* dataBase.swift in Sources */,
+				5FC6337B1DDADE7800C5100A /* JpnDetailViewController.swift in Sources */,
+				5FA2CBC31DD99C0200DDD19A /* SwiftData.swift in Sources */,
+				5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sample.Kashiawase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Briding-Header.h";
 			};
 			name = Debug;
 		};
@@ -439,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sample.Kashiawase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Briding-Header.h";
 			};
 			name = Release;
 		};
