@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,8 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="YTj-nd-fQP">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="44M-lJ-ywY"/>
-                                    <constraint firstAttribute="height" constant="300" id="hb6-nF-c04"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="GIb-W0-ohk"/>
+                                    <constraint firstAttribute="width" secondItem="YTj-nd-fQP" secondAttribute="height" multiplier="1:1" id="kRw-CO-3R1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(C) 2016 KamihiraProject" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLA-Kd-2fv">
@@ -46,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo.png" width="150" height="151"/>
+        <image name="logo.png" width="1721" height="1735"/>
     </resources>
 </document>

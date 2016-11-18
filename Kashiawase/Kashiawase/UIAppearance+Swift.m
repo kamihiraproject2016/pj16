@@ -7,3 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIAppearance+Swift.h"
+
+@implementation UIView (UIViewAppearance_Swift)
++ (instancetype)my_appearanceWhenContainedIn:(Class<UIAppearanceContainer>)containerClass {
+    return [self appearanceWhenContainedIn:containerClass, nil];
+}
+@end
