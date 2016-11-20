@@ -9,5 +9,12 @@
 #ifndef UIAppearance_Swift_h
 #define UIAppearance_Swift_h
 
+#import <UIKit/UIKit.h>
+
+@interface UIView (UIViewAppearance_Swift)
+
++ (instancetype)my_appearanceWhenContainedIn:(Class<UIAppearanceContainer>)containerClass;
+
+@end
 
 #endif /* UIAppearance_Swift_h */
