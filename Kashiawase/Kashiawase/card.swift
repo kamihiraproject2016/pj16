@@ -11,7 +11,7 @@ import UIKit
 
 class Card: UIView {
     var cardName: String;
-    var cardImg: UIImage;
+    var cardImg: UIImage?;
     var seasonTag: Int;
     var cardId: Int;
     var cardImgView: UIImageView;
@@ -31,7 +31,7 @@ class Card: UIView {
     
     init(name :String, imgName: String, season: Int, id: Int){
         cardName = name;
-        cardImg = UIImage(named: imgName)!;
+        cardImg = UIImage(named: imgName);
         seasonTag = season;
         cardId = id;
         
@@ -51,6 +51,7 @@ class Card: UIView {
         
         // cardImgView 設定
         cardImgView.image = cardImg;
+        cardImgView.backgroundColor = UIColor.whiteColor();
         cardImgView.layer.borderWidth = 1.0;
         cardImgView.layer.borderColor = gray.CGColor;
         cardImgView.translatesAutoresizingMaskIntoConstraints = false;

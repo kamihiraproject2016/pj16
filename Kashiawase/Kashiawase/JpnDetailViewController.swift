@@ -18,6 +18,7 @@ class JpnDetailViewController: UIViewController {
     
     var cardId: Int!;
     var eventFlag: Bool!;
+    var seasonTag: Int!;
     
     let seasons: Array<String> = ["春", "夏", "秋", "冬", "通年"];
     var labelName: Array<String>!;
@@ -40,7 +41,7 @@ class JpnDetailViewController: UIViewController {
         var contents: Array<String>! = [];
         
         if(eventFlag == true){ //行事
-            labelName = ["名前", "季節", "日付", "対応お菓子", "目的/由来", "現在の形", "説明"];
+            labelName = ["名前", "日付(季節)", "食べられるお菓子", "目的・由来", "行事について", "現在の形"];
 //            contents = ["ひな祭り / Doll’s Festival", seasons[0], "3/3", "ひなあられ、菱餅", "女の子の健康と幸せを祈る", "女の子のいる家庭で雛人形を飾る", "3/3に行われる女の子のためのお祭りです。桃の節句とも呼ばれています。女の子のいる家庭では雛人形を飾ります。雛人形は平安時代の貴族の格好をしていて、女の子の不幸を取り除いてくれると言われています。"];
             var (results, err) = SD.executeQuery("SELECT * FROM db_info_cards WHERE card_id = " + String(cardId));
             if(err != nil){
@@ -49,23 +50,23 @@ class JpnDetailViewController: UIViewController {
 //                contents = [];
                 for row in results {
                     print(row)
-                    img = UIImage(named: "image/" + (row["illust"]?.asString()!)!);
+                    img = UIImage(named: "img/" + (row["illust"]?.asString()!)!);
                     contents.append((row["name"]?.asString())! + " / " + (row["name_en"]?.asString())!);
-                    let seasonTag = row["season"]?.asInt()!;
-                    contents.append(seasons[seasonTag! - 1]);
+                    seasonTag = row["season"]?.asInt()!;
                 }
             }
             (results, err) = SD.executeQuery("SELECT * FROM db_events WHERE card_id = " + String(cardId));
             if(err != nil){
             } else {
                 for row in results {
-                    contents.append((row["date"]?.asString())!);
+                    contents.append((row["date"]?.asString())! + "(" + seasons[seasonTag! - 1] + ")");
                     contents.append((row["sweets"]?.asString())!);
                     contents.append((row["origin"]?.asString())!);
-                    contents.append((row["present"]?.asString())!);
                     contents.append((row["exp"]?.asString())!);
+                    contents.append((row["present"]?.asString())!);
                 }
             }
+            print(contents)
         }else{ //お菓子
             labelName = ["名前", "季節", "関連行事", "味、食感、香り", "バリエーション", "特産地", "お菓子について"];
 //            contents = ["あんみつ", seasons[1], "-", "寒天、赤えんどう豆など様々な味が楽しめる", "クリームあんみつ、白玉あんみつ、フルーツあんみつ", "京都、鎌倉、浅草、上野", "みつまめに餡を盛った菓子。寒天や赤えんどう豆などを乗せ、みつを加えて食べる。夏の風物詩として知られており、京都や鎌倉のあんみつが有名。"];
@@ -75,7 +76,7 @@ class JpnDetailViewController: UIViewController {
             } else {
 //                contents = [];
                 for row in results {
-                    img = UIImage(named: "image/" + (row["illust"]?.asString()!)!);
+                    img = UIImage(named: "img/" + (row["illust"]?.asString()!)!);
                     contents.append((row["name"]?.asString())! + " / " + (row["name_en"]?.asString())!);
                     let seasonTag = row["season"]?.asInt()!;
                     contents.append(seasons[seasonTag! - 1]);
@@ -108,11 +109,12 @@ class JpnDetailViewController: UIViewController {
 //        }
         
         // 詳細表示
-        for(var i = 0; i < 7; i++){
+//        print(labelName.endIndex)
+        for(var i = 0; i < labelName.count; i++){
             if(contents[i] == "-"){ // なかったらパス
                 continue;
             }
-            var nameLabel: UILabel = UILabel();
+            let nameLabel: UILabel = UILabel();
             nameLabel.text = labelName[i];
             nameLabel.numberOfLines = 0;
             nameLabel.sizeToFit();
@@ -164,7 +166,7 @@ class JpnDetailViewController: UIViewController {
                     constant: -24)
                 ])
             
-            var contentLabel: UILabel = UILabel();
+            let contentLabel: UILabel = UILabel();
             contentLabel.text = contents[i];
             contentLabel.numberOfLines = 0;
             contentLabel.sizeToFit();
@@ -202,7 +204,7 @@ class JpnDetailViewController: UIViewController {
                     constant: -24)
                 ])
             
-            if(i == 6){
+            if(i == labelName.endIndex - 1){
                 detailView.addConstraints([
                     NSLayoutConstraint(
                         item: contentLabel,

@@ -20,14 +20,14 @@ class ListViewController: UIViewController {
     let seasons: Array<String> = ["春", "夏", "秋", "冬", "通年"];
     
     // 色データ
-    let seasonColor: Array<UIColor> = [
-        UIColor(red: 0.94, green: 0.71, blue: 0.76, alpha: 1.0), //春
-        UIColor(red: 0.71, green: 0.84, blue: 0.48, alpha: 1.0), //夏
-        UIColor(red: 0.96, green: 0.69, blue: 0.44, alpha: 1.0), //秋
-        UIColor(red: 0.49, green: 0.68, blue: 0.81, alpha: 1.0), //冬
-        UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.0)  //通年
-    ];
-    let gray: UIColor = UIColor(red: 0.69, green: 0.69, blue: 0.70, alpha: 1.0);
+//    let seasonColor: Array<UIColor> = [
+//        UIColor(red: 0.94, green: 0.71, blue: 0.76, alpha: 1.0), //春
+//        UIColor(red: 0.71, green: 0.84, blue: 0.48, alpha: 1.0), //夏
+//        UIColor(red: 0.96, green: 0.69, blue: 0.44, alpha: 1.0), //秋
+//        UIColor(red: 0.49, green: 0.68, blue: 0.81, alpha: 1.0), //冬
+//        UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.0)  //通年
+//    ];
+//    let gray: UIColor = UIColor(red: 0.69, green: 0.69, blue: 0.70, alpha: 1.0);
 
     // テストデータ
 //    var cardId: Array<Int> = [1, 2, 3];
@@ -49,7 +49,7 @@ class ListViewController: UIViewController {
         
         //DBからのデータ取得
         let result = NSMutableArray();
-        let (results, err) = SD.executeQuery("SELECT * FROM db_info_cards");
+        let (results, err) = SD.executeQuery("SELECT * FROM db_info_cards WHERE season =" + String(season+1));
         if err != nil{
         } else {
             var count = 0;
@@ -57,7 +57,7 @@ class ListViewController: UIViewController {
                 if let cardId = row["card_id"]?.asInt() {
                     let cardName = row["name"]?.asString()!;
                     let cardEnName = row["name_en"]?.asString()!;
-                    let cardImgName = "image/" + (row["illust"]?.asString()!)!;
+                    let cardImgName = "img/" + (row["illust"]?.asString()!)!;
                     let seasonTag = row["season"]?.asInt()!;
 //                    let dic = ["cardId":cardId, "cardName": cardName!, "cardEnName": cardName!, "cardImageName": cardImageName!];
 //                    result.addObject(dic);
@@ -85,13 +85,15 @@ class ListViewController: UIViewController {
     
     @IBAction func cardTap(sender: UIButton) {
         performSegueWithIdentifier("showDetail", sender: sender)
-        
+//        performSegueWithIdentifier("test", sender: sender)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //        print(sender)
-        let detail: DetailViewController = segue.destinationViewController as! DetailViewController
-        detail.cardId = sender!.tag
+        if(segue.identifier == "showDetail"){
+            let detail: DetailViewController = segue.destinationViewController as! DetailViewController;
+            detail.cardId = sender!.tag;
+        }
     }
     
     override func didReceiveMemoryWarning() {
