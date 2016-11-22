@@ -24,8 +24,6 @@ class DetailViewController: UIViewController, UITabBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let lang = NSLocale.preferredLanguages().first;
-        print(lang);
         // Do any additional setup after loading the view, typically from a nib.
         //DBからのデータ取得
         let (results, err) = SD.executeQuery("SELECT name from db_info_cards where card_id = " + String(cardId));
@@ -47,12 +45,17 @@ class DetailViewController: UIViewController, UITabBarDelegate {
         
         // 日英切り替え
         // 日本語設定なら日本語表記 違う場合は英語表記
-        if(lang!.hasPrefix("ja")){
-            JpnView.hidden = false;
-            EnView.hidden = true;
-        }else{
-            JpnView.hidden = true;
-            EnView.hidden = false;
+        let userDefalt: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        if let value = userDefalt.stringForKey("lang"){
+            print(value);
+            if(value == "ja"){
+                JpnView.hidden = false;
+                EnView.hidden = true;
+            }else{
+                JpnView.hidden = true;
+                EnView.hidden = false;
+            }
+
         }
     }
     
@@ -60,6 +63,7 @@ class DetailViewController: UIViewController, UITabBarDelegate {
 //        print("OK");
         switch item.tag{
         case 1:
+//            item.font = UIFont.systemFontOfSize(17, weight: UIFontWeightBold);
             JpnView.hidden = false;
             EnView.hidden = true;
         case 2:

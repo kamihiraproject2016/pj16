@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5F2436401DDB288C00EF47D6 /* EnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */; };
+		5F2AC7EA1DE1D58F00187C34 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */; };
 		5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */; };
+		5F7BB3F91DE286470000E27D /* DataBaseTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3F81DE286470000E27D /* DataBaseTopViewController.swift */; };
+		5F7BB3FB1DE2951C0000E27D /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3FA1DE2951C0000E27D /* ConfigViewController.swift */; };
+		5F7BB3FD1DE2BAC30000E27D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3FC1DE2BAC30000E27D /* GameViewController.swift */; };
+		5F7BB3FF1DE3369A0000E27D /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3FE1DE3369A0000E27D /* Icon.swift */; };
 		5F7F852C1DDDC7FB00B12D01 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */; };
 		5F7F852D1DDDC7FB00B12D01 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */; };
 		5F7F85301DDDC9AD00B12D01 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F852F1DDDC9AD00B12D01 /* UIAppearance+Swift.m */; };
@@ -17,7 +22,6 @@
 		5FA160981DC98166006338EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160971DC98166006338EC /* AppDelegate.swift */; };
 		5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160991DC98166006338EC /* TopViewController.swift */; };
 		5FA1609D1DC98166006338EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609B1DC98166006338EC /* Main.storyboard */; };
-		5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA1609E1DC98166006338EC /* Assets.xcassets */; };
 		5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA160A01DC98166006338EC /* LaunchScreen.storyboard */; };
 		5FA160AD1DC98166006338EC /* KashiawaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160AC1DC98166006338EC /* KashiawaseTests.swift */; };
 		5FA160B81DC98166006338EC /* KashiawaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA160B71DC98166006338EC /* KashiawaseUITests.swift */; };
@@ -25,7 +29,8 @@
 		5FA2CBC11DD99BF300DDD19A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */; };
 		5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */; };
 		5FC6337B1DDADE7800C5100A /* JpnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */; };
-		5FFC1CF21DDE972300FA8251 /* image in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC1CF11DDE972300FA8251 /* image */; };
+		5FD740531DE1DE0A0057CC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD740521DE1DE0A0057CC22 /* Assets.xcassets */; };
+		5FD740571DE1F1320057CC22 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 5FD740561DE1F1320057CC22 /* img */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +52,12 @@
 
 /* Begin PBXFileReference section */
 		5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnDetailViewController.swift; sourceTree = "<group>"; };
+		5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5F7BB3F81DE286470000E27D /* DataBaseTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseTopViewController.swift; sourceTree = "<group>"; };
+		5F7BB3FA1DE2951C0000E27D /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		5F7BB3FC1DE2BAC30000E27D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5F7BB3FE1DE3369A0000E27D /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftData.swift; sourceTree = "<group>"; };
 		5F7F852E1DDDC80400B12D01 /* Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briding-Header.h"; sourceTree = "<group>"; };
@@ -59,7 +69,6 @@
 		5FA160971DC98166006338EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA160991DC98166006338EC /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		5FA1609C1DC98166006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5FA1609E1DC98166006338EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FA160A11DC98166006338EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FA160A31DC98166006338EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA160A81DC98166006338EC /* KashiawaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KashiawaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +82,8 @@
 		5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnDetailViewController.swift; sourceTree = "<group>"; };
-		5FFC1CF11DDE972300FA8251 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
+		5FD740521DE1DE0A0057CC22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FD740561DE1F1320057CC22 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,15 +145,20 @@
 				5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */,
 				5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */,
 				5FA1609B1DC98166006338EC /* Main.storyboard */,
+				5F7BB3FE1DE3369A0000E27D /* Icon.swift */,
 				5F912FDC1DDDF81D0041015D /* Card.swift */,
+				5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */,
 				5FA160991DC98166006338EC /* TopViewController.swift */,
+				5F7BB3FC1DE2BAC30000E27D /* GameViewController.swift */,
+				5F7BB3F81DE286470000E27D /* DataBaseTopViewController.swift */,
 				5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */,
 				5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */,
 				5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */,
 				5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */,
-				5FFC1CF11DDE972300FA8251 /* image */,
-				5FA1609E1DC98166006338EC /* Assets.xcassets */,
+				5F7BB3FA1DE2951C0000E27D /* ConfigViewController.swift */,
+				5FD740561DE1F1320057CC22 /* img */,
 				5FA160A01DC98166006338EC /* LaunchScreen.storyboard */,
+				5FD740521DE1DE0A0057CC22 /* Assets.xcassets */,
 				5FA160A31DC98166006338EC /* Info.plist */,
 			);
 			path = Kashiawase;
@@ -271,11 +286,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD740571DE1F1320057CC22 /* img in Resources */,
 				5FA160A21DC98166006338EC /* LaunchScreen.storyboard in Resources */,
 				5FA160C71DC9817E006338EC /* Localizable.strings in Resources */,
-				5FA1609F1DC98166006338EC /* Assets.xcassets in Resources */,
-				5FFC1CF21DDE972300FA8251 /* image in Resources */,
 				5F99DE0D1DDD5628007A39ED /* db_kashiawase.sqlite3 in Resources */,
+				5FD740531DE1DE0A0057CC22 /* Assets.xcassets in Resources */,
 				5FA1609D1DC98166006338EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,12 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7BB3FD1DE2BAC30000E27D /* GameViewController.swift in Sources */,
 				5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */,
 				5F7F852D1DDDC7FB00B12D01 /* SwiftData.swift in Sources */,
+				5F7BB3FF1DE3369A0000E27D /* Icon.swift in Sources */,
 				5FA160981DC98166006338EC /* AppDelegate.swift in Sources */,
 				5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */,
 				5F7F852C1DDDC7FB00B12D01 /* StringExtensions.swift in Sources */,
+				5F7BB3FB1DE2951C0000E27D /* ConfigViewController.swift in Sources */,
+				5F7BB3F91DE286470000E27D /* DataBaseTopViewController.swift in Sources */,
 				5F2436401DDB288C00EF47D6 /* EnDetailViewController.swift in Sources */,
+				5F2AC7EA1DE1D58F00187C34 /* LogoViewController.swift in Sources */,
 				5FC6337B1DDADE7800C5100A /* JpnDetailViewController.swift in Sources */,
 				5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */,
 				5F7F85301DDDC9AD00B12D01 /* UIAppearance+Swift.m in Sources */,
@@ -461,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kashiawase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sample.Kashiawase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kashiawase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sample.Kashiawase;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,26 +19,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="YTj-nd-fQP">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="GIb-W0-ohk"/>
-                                    <constraint firstAttribute="width" secondItem="YTj-nd-fQP" secondAttribute="height" multiplier="1:1" id="kRw-CO-3R1"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(C) 2016 KamihiraProject" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLA-Kd-2fv">
                                 <rect key="frame" x="229" y="565" width="142" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-7k-gWm">
+                                <rect key="frame" x="165" y="165" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nMn-7k-gWm" secondAttribute="height" multiplier="1:1" id="RhK-lT-biv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YTj-nd-fQP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2Az-r2-XJE"/>
                             <constraint firstItem="kLA-Kd-2fv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HS9-1t-gni"/>
-                            <constraint firstItem="YTj-nd-fQP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZcW-xN-DD8"/>
+                            <constraint firstItem="nMn-7k-gWm" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.45" id="Yut-DR-LzZ"/>
+                            <constraint firstItem="nMn-7k-gWm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="j2O-Tv-uKd"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="kLA-Kd-2fv" secondAttribute="bottom" constant="20" id="uAR-Zr-xIo"/>
+                            <constraint firstItem="nMn-7k-gWm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vtZ-Pt-yjP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo.png" width="1721" height="1735"/>
+        <image name="Image" width="1721" height="1735"/>
     </resources>
 </document>

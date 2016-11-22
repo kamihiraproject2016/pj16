@@ -18,7 +18,8 @@ class EnDetailViewController: UIViewController {
     
     var cardId: Int!;
     var eventFlag: Bool!;
-
+    var seasonTag: Int!;
+    
     let enSeasons: Array<String> = ["spring", "summer", "autumn", "winter", "all year around"];
     let seasons: Array<String> = ["Spring", "Summer", "Autumn", "Winter", "All year around"];
     var labelName: Array<String>!;
@@ -41,7 +42,7 @@ class EnDetailViewController: UIViewController {
         var contents: Array<String>! = [];
         
         if(eventFlag == true){ //行事
-            labelName = ["名前", "季節", "日付", "対応お菓子", "目的/由来", "現在の形", "説明"];
+            labelName = ["Name", "Date(Season)", "Related wagashi", "The purpose and history", "About the event", "The present state"];
 //            contents = ["Doll’s Festival", seasons[0], "March 3rd", "Hinaarare, Hishi Mochi", "It is a day to pray for the health and happiness of young girls.", "Families with girls display Hina Ningyo, which means Hina dolls.", "It is a festival for girls  which is on March 3rd.It is also called 'Momo no Sekku', which means 'Peach Festival'. Families with girls display Hina dolls. Hina dolls wear Heian period court costumes, and it is said that Hina dolls take away the bad luck of the girls who own them."];
             var (results, err) = SD.executeQuery("SELECT * FROM db_info_cards WHERE card_id = " + String(cardId));
             if(err != nil){
@@ -50,21 +51,20 @@ class EnDetailViewController: UIViewController {
 //                contents = [];
                 for row in results {
                     print(row)
-                    img = UIImage(named: "image/" + (row["illust"]?.asString()!)!);
+                    img = UIImage(named: "img/" + (row["illust"]?.asString()!)!);
                     contents.append((row["name"]?.asString())! + " / " + (row["name_en"]?.asString())!);
-                    let seasonTag = row["season"]?.asInt()!;
-                    contents.append(seasons[seasonTag! - 1]);
+                    seasonTag = row["season"]?.asInt()!;
                 }
             }
             (results, err) = SD.executeQuery("SELECT * FROM db_events_en WHERE card_id = " + String(cardId));
             if(err != nil){
             } else {
                 for row in results {
-                    contents.append((row["date"]?.asString())!);
+                    contents.append((row["date"]?.asString())! + "(" + seasons[seasonTag! - 1] + ")");
                     contents.append((row["sweets"]?.asString())!);
                     contents.append((row["origin"]?.asString())!);
-                    contents.append((row["present"]?.asString())!);
                     contents.append((row["exp"]?.asString())!);
+                    contents.append((row["present"]?.asString())!);
                 }
             }
 
@@ -78,7 +78,7 @@ class EnDetailViewController: UIViewController {
                 print(results);
                 for row in results {
                     print(row["season"]?.asInt());
-                    img = UIImage(named: "image/" + (row["illust"]?.asString()!)!);
+                    img = UIImage(named: "img/" + (row["illust"]?.asString()!)!);
                     contents.append((row["name"]?.asString())! + " / " + (row["name_en"]?.asString())!);
                     let seasonTag = row["season"]?.asInt()!;
                     contents.append(seasons[seasonTag! - 1]);
@@ -102,11 +102,12 @@ class EnDetailViewController: UIViewController {
         
         // 詳細表示
         print(contents);
-        for(var i = 0; i < contents.count; i++){
+        print(labelName.count);
+        for(var i = 0; i < labelName.count; i++){
             if(contents[i] == "-"){ // なかったらパス
                 continue;
             }
-            var nameLabel: UILabel = UILabel();
+            let nameLabel: UILabel = UILabel();
             nameLabel.text = labelName[i];
             nameLabel.numberOfLines = 0;
             nameLabel.sizeToFit();
@@ -158,7 +159,7 @@ class EnDetailViewController: UIViewController {
                     constant: -24)
                 ])
             
-            var contentLabel: UILabel = UILabel();
+            let contentLabel: UILabel = UILabel();
             contentLabel.text = contents[i];
             contentLabel.numberOfLines = 0;
             contentLabel.sizeToFit();
@@ -196,7 +197,7 @@ class EnDetailViewController: UIViewController {
                     constant: -24)
                 ])
             
-            if(i == 6){
+            if(i == labelName.endIndex - 1){
                 detailView.addConstraints([
                     NSLayoutConstraint(
                         item: contentLabel,

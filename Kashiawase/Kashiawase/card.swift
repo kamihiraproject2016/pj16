@@ -11,7 +11,7 @@ import UIKit
 
 class Card: UIView {
     var cardName: String;
-    var cardImg: UIImage;
+    var cardImg: UIImage?;
     var seasonTag: Int;
     var cardId: Int;
     var cardImgView: UIImageView;
@@ -31,7 +31,7 @@ class Card: UIView {
     
     init(name :String, imgName: String, season: Int, id: Int){
         cardName = name;
-        cardImg = UIImage(named: imgName)!;
+        cardImg = UIImage(named: imgName);
         seasonTag = season;
         cardId = id;
         
@@ -51,6 +51,7 @@ class Card: UIView {
         
         // cardImgView 設定
         cardImgView.image = cardImg;
+        cardImgView.backgroundColor = UIColor.whiteColor();
         cardImgView.layer.borderWidth = 1.0;
         cardImgView.layer.borderColor = gray.CGColor;
         cardImgView.translatesAutoresizingMaskIntoConstraints = false;
@@ -178,13 +179,14 @@ class Card: UIView {
     }
     
     //AutoLayout カード設定
-    func cardSet(superView :UIView){
-        superView.addConstraints([
+    func cardSet(max :Int, num :Int){
+        // カード設定
+        self.superview!.addConstraints([
             NSLayoutConstraint(
                 item: self,
                 attribute: NSLayoutAttribute.Width,
                 relatedBy: NSLayoutRelation.Equal,
-                toItem: superView,
+                toItem: self.superview,
                 attribute: NSLayoutAttribute.Width,
                 multiplier: 0.49,
                 constant: 0),
@@ -198,11 +200,8 @@ class Card: UIView {
                 constant: 0)
             
             ])
-    }
-    
-    //AutoLayout カード配置設定
-    func cardSet(superView :UIView, max :Int, num :Int){
         
+        // カード配置設定
         var rightFlag: Bool = false;
         var bottomFlag: Bool = false;
         var displacement: CGFloat; //上からの擦れ
@@ -213,12 +212,12 @@ class Card: UIView {
         
         //下寄せ
         if(bottomFlag){
-            superView.addConstraints([
+            self.superview!.addConstraints([
                 NSLayoutConstraint(
                     item: self,
                     attribute: NSLayoutAttribute.Bottom,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: superView,
+                    toItem: self.superview!,
                     attribute: NSLayoutAttribute.Bottom,
                     multiplier: 1.0,
                     constant: 0)
@@ -226,23 +225,23 @@ class Card: UIView {
         }
         
         if(rightFlag){
-            superView.addConstraints([
+            self.superview!.addConstraints([
                 NSLayoutConstraint(
                     item: self,
                     attribute: NSLayoutAttribute.Trailing,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: superView,
+                    toItem: self.superview!,
                     attribute: NSLayoutAttribute.Trailing,
                     multiplier: 1.0,
                     constant: 0)
                 ]);
         }else{
-            superView.addConstraints([
+            self.superview!.addConstraints([
                 NSLayoutConstraint(
                     item: self,
                     attribute: NSLayoutAttribute.Leading,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: superView,
+                    toItem: self.superview!,
                     attribute: NSLayoutAttribute.Leading,
                     multiplier: 1.0,
                     constant: 0)
@@ -257,12 +256,12 @@ class Card: UIView {
 //        print(self.layer.bounds.height);
 //        print(Int(displacement));
 
-        superView.addConstraints([
+        self.superview!.addConstraints([
             NSLayoutConstraint(
                 item: self,
                 attribute: NSLayoutAttribute.Top,
                 relatedBy: NSLayoutRelation.Equal,
-                toItem: superView,
+                toItem: self.superview!,
                 attribute: NSLayoutAttribute.Top,
                 multiplier: 1.0,
                 constant: displacement)
