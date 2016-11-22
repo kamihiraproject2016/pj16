@@ -55,8 +55,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
 
             // AutoLayout
             cardView.cardItemSet();
-            cardView.cardSet(listView);
-            cardView.cardSet(listView, max: 5, num: i);
+            cardView.cardSet(5, num: i);
         }
 
         //モーダルビュー設定
@@ -215,8 +214,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
                     
                     // AutoLayout
                     cardView.cardItemSet();
-                    cardView.cardSet(listView);
-                    cardView.cardSet(listView, max: results.count, num: count);
+                    cardView.cardSet(results.count, num: count);
 
                 }
                 count++;

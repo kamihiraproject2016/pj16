@@ -63,6 +63,7 @@ class DetailViewController: UIViewController, UITabBarDelegate {
 //        print("OK");
         switch item.tag{
         case 1:
+//            item.font = UIFont.systemFontOfSize(17, weight: UIFontWeightBold);
             JpnView.hidden = false;
             EnView.hidden = true;
         case 2:

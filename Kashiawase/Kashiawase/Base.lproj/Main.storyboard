@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4x-ug-rgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3981.5" y="157.5"/>
+            <point key="canvasLocation" x="4093.5" y="-237.5"/>
         </scene>
         <!--Logo View Controller-->
         <scene sceneID="sSf-Kk-tLs">
@@ -246,7 +246,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SgU-68-aLn"/>
+                    <navigationItem key="navigationItem" title="設定" id="SgU-68-aLn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="EnBtn" destination="ZNj-se-8pW" id="WGb-ZK-gGk"/>
@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="3035.5" y="935.5"/>
         </scene>
-        <!--View Controller-->
+        <!--ゲーム-->
         <scene sceneID="76v-9p-wyg">
             <objects>
-                <viewController id="Edf-mS-EIl" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Edf-mS-EIl" customClass="GameViewController" customModule="Kashiawase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qq8-Kk-rNb"/>
                         <viewControllerLayoutGuide type="bottom" id="FHO-bR-Kzf"/>
@@ -270,17 +270,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲーム画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYN-hD-2QO">
-                                <rect key="frame" x="123" y="275" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjO-T9-IxW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ax-aL-OM0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-98-Nwf">
+                                                <rect key="frame" x="0.0" y="24" width="375" height="0.0"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FkT-98-Nwf" secondAttribute="trailing" id="1Wq-Jy-fAu"/>
+                                            <constraint firstAttribute="bottom" secondItem="FkT-98-Nwf" secondAttribute="bottom" id="3hh-eW-nsN"/>
+                                            <constraint firstItem="FkT-98-Nwf" firstAttribute="leading" secondItem="3Ax-aL-OM0" secondAttribute="leading" id="FKl-qr-r6K"/>
+                                            <constraint firstItem="FkT-98-Nwf" firstAttribute="top" secondItem="3Ax-aL-OM0" secondAttribute="top" id="UZy-sT-xjT"/>
+                                            <constraint firstItem="FkT-98-Nwf" firstAttribute="width" secondItem="3Ax-aL-OM0" secondAttribute="width" id="VUe-Jr-U1H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Ax-aL-OM0" firstAttribute="leading" secondItem="cjO-T9-IxW" secondAttribute="leading" id="Bgn-Lb-3vx"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Ax-aL-OM0" secondAttribute="trailing" id="ZKj-xx-LK1"/>
+                                    <constraint firstItem="3Ax-aL-OM0" firstAttribute="top" secondItem="cjO-T9-IxW" secondAttribute="top" id="fMq-DZ-F27"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Ax-aL-OM0" secondAttribute="bottom" id="nCd-8c-K2Q"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ax-aL-OM0" firstAttribute="width" secondItem="yoP-rw-Bme" secondAttribute="width" id="0Yg-Ik-6J6"/>
+                            <constraint firstItem="cjO-T9-IxW" firstAttribute="top" secondItem="Qq8-Kk-rNb" secondAttribute="bottom" id="0pD-7m-6lY"/>
+                            <constraint firstAttribute="trailing" secondItem="cjO-T9-IxW" secondAttribute="trailing" id="NV4-Ow-GWd"/>
+                            <constraint firstItem="cjO-T9-IxW" firstAttribute="leading" secondItem="yoP-rw-Bme" secondAttribute="leading" id="Ywj-lh-f6p"/>
+                            <constraint firstItem="FHO-bR-Kzf" firstAttribute="top" secondItem="cjO-T9-IxW" secondAttribute="bottom" id="ZsP-Ic-RUv"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vWX-58-gry"/>
+                    <navigationItem key="navigationItem" title="ゲーム" id="vWX-58-gry">
+                        <barButtonItem key="rightBarButtonItem" title="更新" id="A9Z-nt-WIQ">
+                            <connections>
+                                <action selector="updateBtn:" destination="Edf-mS-EIl" id="FSs-eg-eAM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="listView" destination="FkT-98-Nwf" id="Px9-08-aG8"/>
+                        <segue destination="rV2-Ev-x65" kind="show" identifier="showDetail" id="4EP-mA-soc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my8-Ws-MtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -353,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZw-RT-Krb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3035.5" y="157.5"/>
+            <point key="canvasLocation" x="3035.5" y="133.5"/>
         </scene>
         <!--Jpn Detail View Controller-->
         <scene sceneID="g3Q-nU-ywJ">
@@ -432,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSY-4L-qMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4545.5" y="470"/>
+            <point key="canvasLocation" x="4599.5" y="112"/>
         </scene>
         <!--En Detail View Controller-->
         <scene sceneID="Uss-yq-Xan">
@@ -512,7 +551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wex-tC-RAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4545.5" y="-201"/>
+            <point key="canvasLocation" x="4599.5" y="-504"/>
         </scene>
         <!--Item-->
         <scene sceneID="JV4-vm-r1M">
@@ -527,7 +566,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Edf-mS-EIl" kind="relationship" relationship="rootViewController" id="n2K-5m-uyU"/>
+                        <segue destination="Edf-mS-EIl" kind="relationship" relationship="rootViewController" id="Y53-gP-uB9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6r-3r-TFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -550,7 +589,7 @@
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem tag="1" title="DB" id="yCB-MH-oO0"/>
+                                    <tabBarItem tag="1" title="カード一覧" id="yCB-MH-oO0"/>
                                     <tabBarItem tag="2" title="ゲーム" id="MUf-dP-Rd1"/>
                                     <tabBarItem tag="3" title="設定" id="gaL-Q9-RAv"/>
                                 </items>
@@ -599,8 +638,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="configView" destination="SCB-yX-Vmq" id="FZo-Yx-5rG"/>
-                        <outlet property="databaseView" destination="Z07-57-GdD" id="wBk-qP-jzO"/>
-                        <outlet property="gameView" destination="ZDm-ZC-a69" id="yYp-9q-152"/>
+                        <outlet property="databaseView" destination="ZDm-ZC-a69" id="z8u-tT-0EP"/>
+                        <outlet property="gameView" destination="Z07-57-GdD" id="HGu-lk-Xqa"/>
                         <outlet property="testTabBar" destination="RT6-7T-juf" id="sno-qa-jtk"/>
                     </connections>
                 </viewController>
@@ -633,6 +672,6 @@
         <image name="Image-1" width="9538" height="9532"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vzc-8u-RFM"/>
+        <segue reference="4EP-mA-soc"/>
     </inferredMetricsTieBreakers>
 </document>

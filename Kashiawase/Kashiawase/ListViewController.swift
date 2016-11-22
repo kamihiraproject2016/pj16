@@ -71,8 +71,7 @@ class ListViewController: UIViewController {
                     
                     // AutoLayout
                     cardView.cardItemSet();
-                    cardView.cardSet(listView);
-                    cardView.cardSet(listView, max: results.count, num: count);
+                    cardView.cardSet(results.count, num: count);
 
                     count++;
                 }

@@ -6,7 +6,6 @@
 //  Copyright © 2016年 KamihiraProject. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Foundation
 
@@ -51,12 +50,12 @@ class TopViewController: UIViewController, UITabBarDelegate {
         //        print("OK");
         switch item.tag{
         case 1: //DB表示
-            gameView.hidden = false;
-            databaseView.hidden = true;
-            configView.hidden = true;
-        case 2: //ゲーム画面表示
             gameView.hidden = true;
             databaseView.hidden = false;
+            configView.hidden = true;
+        case 2: //ゲーム画面表示
+            gameView.hidden = false;
+            databaseView.hidden = true;
             configView.hidden = true;
         case 3: //設定画面
             gameView.hidden = true;

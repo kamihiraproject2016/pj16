@@ -12,6 +12,8 @@
 		5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */; };
 		5F7BB3F91DE286470000E27D /* DataBaseTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3F81DE286470000E27D /* DataBaseTopViewController.swift */; };
 		5F7BB3FB1DE2951C0000E27D /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3FA1DE2951C0000E27D /* ConfigViewController.swift */; };
+		5F7BB3FD1DE2BAC30000E27D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3FC1DE2BAC30000E27D /* GameViewController.swift */; };
+		5F7BB3FF1DE3369A0000E27D /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7BB3FE1DE3369A0000E27D /* Icon.swift */; };
 		5F7F852C1DDDC7FB00B12D01 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */; };
 		5F7F852D1DDDC7FB00B12D01 /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */; };
 		5F7F85301DDDC9AD00B12D01 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F852F1DDDC9AD00B12D01 /* UIAppearance+Swift.m */; };
@@ -54,6 +56,8 @@
 		5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5F7BB3F81DE286470000E27D /* DataBaseTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseTopViewController.swift; sourceTree = "<group>"; };
 		5F7BB3FA1DE2951C0000E27D /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		5F7BB3FC1DE2BAC30000E27D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5F7BB3FE1DE3369A0000E27D /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftData.swift; sourceTree = "<group>"; };
 		5F7F852E1DDDC80400B12D01 /* Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Briding-Header.h"; sourceTree = "<group>"; };
@@ -141,9 +145,11 @@
 				5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */,
 				5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */,
 				5FA1609B1DC98166006338EC /* Main.storyboard */,
+				5F7BB3FE1DE3369A0000E27D /* Icon.swift */,
 				5F912FDC1DDDF81D0041015D /* Card.swift */,
 				5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */,
 				5FA160991DC98166006338EC /* TopViewController.swift */,
+				5F7BB3FC1DE2BAC30000E27D /* GameViewController.swift */,
 				5F7BB3F81DE286470000E27D /* DataBaseTopViewController.swift */,
 				5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */,
 				5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */,
@@ -310,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7BB3FD1DE2BAC30000E27D /* GameViewController.swift in Sources */,
 				5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */,
 				5F7F852D1DDDC7FB00B12D01 /* SwiftData.swift in Sources */,
+				5F7BB3FF1DE3369A0000E27D /* Icon.swift in Sources */,
 				5FA160981DC98166006338EC /* AppDelegate.swift in Sources */,
 				5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */,
 				5F7F852C1DDDC7FB00B12D01 /* StringExtensions.swift in Sources */,
