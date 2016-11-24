@@ -24,7 +24,24 @@ class EnDetailViewController: UIViewController {
     let seasons: Array<String> = ["Spring", "Summer", "Autumn", "Winter", "All year around"];
     var labelName: Array<String>!;
     
+    //色設定
     let gray: UIColor = UIColor(red: 0.69, green: 0.69, blue: 0.70, alpha: 1.0);
+    
+    let labelColor = [
+        UIColor(red: 0.62, green: 0.25, blue: 0.34, alpha: 1.0),
+        UIColor(red: 0.45, green: 0.58, blue: 0.26, alpha: 1.0),
+        UIColor(red: 0.71, green: 0.40, blue: 0.26, alpha: 1.0),
+        UIColor(red: 0.25, green: 0.48, blue: 0.65, alpha: 1.0),
+        UIColor(red: 0.29, green: 0.24, blue: 0.22, alpha: 1.0)
+    ];
+    
+    let bckColor = [
+        UIColor(red: 0.96, green: 0.90, blue: 0.91, alpha: 1.0),
+        UIColor(red: 0.94, green: 0.96, blue: 0.90, alpha: 1.0),
+        UIColor(red: 0.96, green: 0.93, blue: 0.90, alpha: 1.0),
+        UIColor(red: 0.90, green: 0.94, blue: 0.96, alpha: 1.0),
+        UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.0)
+    ];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +49,10 @@ class EnDetailViewController: UIViewController {
 
         detailView.layer.masksToBounds = true;
         detailView.layer.cornerRadius = 6;
-        detailView.layer.borderColor = gray.CGColor;
-        detailView.layer.borderWidth = 1.0;
-        imgView.layer.borderColor = gray.CGColor;
-        imgView.layer.borderWidth = 1.0;
+//        detailView.layer.borderColor = gray.CGColor;
+//        detailView.layer.borderWidth = 1.0;
+//        imgView.layer.borderColor = gray.CGColor;
+//        imgView.layer.borderWidth = 1.0;
         
         // サンプルデータ
         var img: UIImage!;
@@ -52,7 +69,7 @@ class EnDetailViewController: UIViewController {
                 for row in results {
                     print(row)
                     img = UIImage(named: "img/" + (row["illust"]?.asString()!)!);
-                    contents.append((row["name"]?.asString())! + " / " + (row["name_en"]?.asString())!);
+                    contents.append((row["name_en"]?.asString())! + " / " + (row["name"]?.asString())!);
                     seasonTag = row["season"]?.asInt()!;
                 }
             }
@@ -79,8 +96,8 @@ class EnDetailViewController: UIViewController {
                 for row in results {
                     print(row["season"]?.asInt());
                     img = UIImage(named: "img/" + (row["illust"]?.asString()!)!);
-                    contents.append((row["name"]?.asString())! + " / " + (row["name_en"]?.asString())!);
-                    let seasonTag = row["season"]?.asInt()!;
+                    contents.append((row["name_en"]?.asString())! + " / " + (row["name"]?.asString())!);
+                    seasonTag = row["season"]?.asInt()!;
                     contents.append(seasons[seasonTag! - 1]);
                 }
             }
@@ -100,6 +117,9 @@ class EnDetailViewController: UIViewController {
         // イラスト表示
         imgView.image = img;
         
+        detailView.superview?.backgroundColor = bckColor[seasonTag - 1];
+        imgView.backgroundColor = bckColor[seasonTag - 1];
+        
         // 詳細表示
         print(contents);
         print(labelName.count);
@@ -109,6 +129,7 @@ class EnDetailViewController: UIViewController {
             }
             let nameLabel: UILabel = UILabel();
             nameLabel.text = labelName[i];
+            nameLabel.textColor = labelColor[seasonTag! - 1];
             nameLabel.numberOfLines = 0;
             nameLabel.sizeToFit();
             nameLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping;

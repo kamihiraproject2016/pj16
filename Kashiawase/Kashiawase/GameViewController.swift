@@ -34,6 +34,7 @@ class GameViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
         let backBtn: UIBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil);
         self.navigationItem.backBarButtonItem = backBtn;
+        self.navigationItem.rightBarButtonItem?.image = self.navigationItem.rightBarButtonItem?.image?.imageWithRenderingMode(.AlwaysOriginal);
 
         for(var i = 0; i < 8; i++){
             let groupView = UIView();
@@ -418,7 +419,7 @@ class GameViewController: UIViewController {
                         let (res, e) = SD.executeQuery("SELECT * FROM db_info_cards WHERE card_id =" + String(cardIds[j]));
                         if e != nil{
                         }else{
-                            print(res);
+//                            print(res);
                             for row in res{
                                 if let img = row["illust"]?.asString(){
                                     icons[i][j].iconImgView.image = UIImage(named: "img/" + img);
@@ -435,12 +436,12 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func iconTap(sender: UIButton){
-        print(sender.tag);
+//        print(sender.tag);
         performSegueWithIdentifier("showDetail", sender: sender)
     }
     
     @IBAction func updateBtn(sender: UIBarButtonItem) {
-        let alert: UIAlertController = UIAlertController(title: "今あるカードの組み合わせは\n保存されません。", message: "新しいゲームを始めますか？", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert: UIAlertController = UIAlertController(title: "新しくゲームを始めますか？", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
         let okBtn: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.Default, handler: {
             (action: UIAlertAction!) -> Void in

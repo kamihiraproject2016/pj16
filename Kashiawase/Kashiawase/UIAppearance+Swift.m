@@ -14,3 +14,9 @@
     return [self appearanceWhenContainedIn:containerClass, nil];
 }
 @end
+
+@implementation UIBarItem (UIViewAppearance_Swift)
++ (instancetype)my_appearanceWhenContainedIn:(Class<UIAppearanceContainer>)containerClass {
+    return [self appearanceWhenContainedIn:containerClass, nil];
+}
+@end

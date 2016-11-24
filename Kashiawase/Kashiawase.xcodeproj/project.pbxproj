@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0EEFA21DE5668000821F32 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0EEFA11DE5668000821F32 /* CustomSegue.swift */; };
+		5F0EEFA61DE5D63800821F32 /* langTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0EEFA51DE5D63700821F32 /* langTabBar.swift */; };
 		5F2436401DDB288C00EF47D6 /* EnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */; };
 		5F2AC7EA1DE1D58F00187C34 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */; };
 		5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */; };
@@ -29,6 +31,7 @@
 		5FA2CBC11DD99BF300DDD19A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */; };
 		5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */; };
 		5FC6337B1DDADE7800C5100A /* JpnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */; };
+		5FC7643E1DE4776300CD5AF6 /* ConfigLangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7643D1DE4776300CD5AF6 /* ConfigLangViewController.swift */; };
 		5FD740531DE1DE0A0057CC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD740521DE1DE0A0057CC22 /* Assets.xcassets */; };
 		5FD740571DE1F1320057CC22 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 5FD740561DE1F1320057CC22 /* img */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F0EEFA11DE5668000821F32 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		5F0EEFA51DE5D63700821F32 /* langTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = langTabBar.swift; sourceTree = "<group>"; };
 		5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnDetailViewController.swift; sourceTree = "<group>"; };
 		5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		5F4FADAD1DD41FCE00FC1C18 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 		5FA2CBC01DD99BF300DDD19A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5FB65DEF1DD2B9F900418E2B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JpnDetailViewController.swift; sourceTree = "<group>"; };
+		5FC7643D1DE4776300CD5AF6 /* ConfigLangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigLangViewController.swift; sourceTree = "<group>"; };
 		5FD740521DE1DE0A0057CC22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FD740561DE1F1320057CC22 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,10 +147,12 @@
 				5F7F852E1DDDC80400B12D01 /* Briding-Header.h */,
 				5F7F852F1DDDC9AD00B12D01 /* UIAppearance+Swift.m */,
 				5F7F85311DDDCA2E00B12D01 /* UIAppearance+Swift.h */,
+				5F0EEFA51DE5D63700821F32 /* langTabBar.swift */,
 				5FA160971DC98166006338EC /* AppDelegate.swift */,
 				5F7F852A1DDDC7FB00B12D01 /* StringExtensions.swift */,
 				5F7F852B1DDDC7FB00B12D01 /* SwiftData.swift */,
 				5FA1609B1DC98166006338EC /* Main.storyboard */,
+				5F0EEFA11DE5668000821F32 /* CustomSegue.swift */,
 				5F7BB3FE1DE3369A0000E27D /* Icon.swift */,
 				5F912FDC1DDDF81D0041015D /* Card.swift */,
 				5F2AC7E91DE1D58F00187C34 /* LogoViewController.swift */,
@@ -156,6 +164,7 @@
 				5FC6337A1DDADE7800C5100A /* JpnDetailViewController.swift */,
 				5F24363F1DDB288C00EF47D6 /* EnDetailViewController.swift */,
 				5F7BB3FA1DE2951C0000E27D /* ConfigViewController.swift */,
+				5FC7643D1DE4776300CD5AF6 /* ConfigLangViewController.swift */,
 				5FD740561DE1F1320057CC22 /* img */,
 				5FA160A01DC98166006338EC /* LaunchScreen.storyboard */,
 				5FD740521DE1DE0A0057CC22 /* Assets.xcassets */,
@@ -316,17 +325,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FC7643E1DE4776300CD5AF6 /* ConfigLangViewController.swift in Sources */,
 				5F7BB3FD1DE2BAC30000E27D /* GameViewController.swift in Sources */,
 				5FA1609A1DC98166006338EC /* TopViewController.swift in Sources */,
 				5F7F852D1DDDC7FB00B12D01 /* SwiftData.swift in Sources */,
 				5F7BB3FF1DE3369A0000E27D /* Icon.swift in Sources */,
 				5FA160981DC98166006338EC /* AppDelegate.swift in Sources */,
 				5FB65DF01DD2B9F900418E2B /* ListViewController.swift in Sources */,
+				5F0EEFA21DE5668000821F32 /* CustomSegue.swift in Sources */,
 				5F7F852C1DDDC7FB00B12D01 /* StringExtensions.swift in Sources */,
 				5F7BB3FB1DE2951C0000E27D /* ConfigViewController.swift in Sources */,
 				5F7BB3F91DE286470000E27D /* DataBaseTopViewController.swift in Sources */,
 				5F2436401DDB288C00EF47D6 /* EnDetailViewController.swift in Sources */,
 				5F2AC7EA1DE1D58F00187C34 /* LogoViewController.swift in Sources */,
+				5F0EEFA61DE5D63800821F32 /* langTabBar.swift in Sources */,
 				5FC6337B1DDADE7800C5100A /* JpnDetailViewController.swift in Sources */,
 				5F4FADAE1DD41FCE00FC1C18 /* DetailViewController.swift in Sources */,
 				5F7F85301DDDC9AD00B12D01 /* UIAppearance+Swift.m in Sources */,

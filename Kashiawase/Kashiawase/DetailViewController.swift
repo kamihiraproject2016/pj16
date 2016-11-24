@@ -11,13 +11,31 @@ import Foundation
 
 class DetailViewController: UIViewController, UITabBarDelegate {
     
-    @IBOutlet weak var changeTabBar: UITabBar!;
+    @IBOutlet weak var ChangeTabBar: langTabBar!;
     @IBOutlet weak var JpnView: UIView!;
     @IBOutlet weak var EnView: UIView!;
 
     var cardId: Int!;
+    var season: Int!;
 
     let gray: UIColor = UIColor(red: 0.69, green: 0.69, blue: 0.70, alpha: 1.0);
+    
+    //色設定
+    let tabColor = [
+        UIColor(red: 0.96, green: 0.91, blue: 0.95, alpha: 1.0),
+        UIColor(red: 0.96, green: 0.96, blue: 0.95, alpha: 1.0),
+        UIColor(red: 0.96, green: 0.96, blue: 0.95, alpha: 1.0),
+        UIColor(red: 0.95, green: 0.96, blue: 0.96, alpha: 1.0),
+        UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.0)
+    ];
+    
+    let langColor = [
+        UIColor(red: 0.89, green: 0.48, blue: 0.57, alpha: 1.0),
+        UIColor(red: 0.57, green: 0.78, blue: 0.35, alpha: 1.0),
+        UIColor(red: 0.95, green: 0.59, blue: 0.31, alpha: 1.0),
+        UIColor(red: 0.30, green: 0.57, blue: 0.72, alpha: 1.0),
+        UIColor(red: 0.29, green: 0.24, blue: 0.22, alpha: 1.0)
+    ];
 
     var cardName: String!;
     
@@ -26,34 +44,43 @@ class DetailViewController: UIViewController, UITabBarDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         //DBからのデータ取得
-        let (results, err) = SD.executeQuery("SELECT name from db_info_cards where card_id = " + String(cardId));
+        let (results, err) = SD.executeQuery("SELECT * from db_info_cards where card_id = " + String(cardId));
         if err != nil{
         } else {
             for row in results{
                 cardName = row["name"]?.asString()!;
+                season = row["season"]?.asInt()!;
+                season = season - 1;
             }
         }
         // ナビゲーションバーの設定
         self.title = cardName;
         
         // タブバーの設定
-        changeTabBar.delegate = self;
-        changeTabBar.barTintColor = gray;
-        changeTabBar.tintColor = UIColor.whiteColor();
-        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont.systemFontOfSize(25.5)], forState: UIControlState.Normal);
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -9);
+        ChangeTabBar.delegate = self;
+        ChangeTabBar.barTintColor = tabColor[season];
+        UITabBarItem.my_appearanceWhenContainedIn(langTabBar.self).setTitleTextAttributes([
+            NSFontAttributeName : UIFont.systemFontOfSize(25.5),
+            NSForegroundColorAttributeName:  UIColor(red: 0.50, green: 0.50, blue: 0.50, alpha: 1.0)
+            ], forState: UIControlState.Normal);
+        UITabBarItem.my_appearanceWhenContainedIn(langTabBar.self).setTitleTextAttributes([
+            NSForegroundColorAttributeName: langColor[season]
+            ], forState: UIControlState.Selected);
+        UITabBarItem.my_appearanceWhenContainedIn(langTabBar.self).titlePositionAdjustment = UIOffsetMake(0, -9);
         
         // 日英切り替え
         // 日本語設定なら日本語表記 違う場合は英語表記
         let userDefalt: NSUserDefaults = NSUserDefaults.standardUserDefaults();
         if let value = userDefalt.stringForKey("lang"){
             print(value);
-            if(value == "ja"){
+            if(value == "日本語"){
                 JpnView.hidden = false;
                 EnView.hidden = true;
+                ChangeTabBar.selectedItem = ChangeTabBar.items![0];
             }else{
                 JpnView.hidden = true;
                 EnView.hidden = false;
+                ChangeTabBar.selectedItem = ChangeTabBar.items![1];
             }
 
         }
@@ -63,7 +90,6 @@ class DetailViewController: UIViewController, UITabBarDelegate {
 //        print("OK");
         switch item.tag{
         case 1:
-//            item.font = UIFont.systemFontOfSize(17, weight: UIFontWeightBold);
             JpnView.hidden = false;
             EnView.hidden = true;
         case 2:

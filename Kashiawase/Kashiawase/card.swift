@@ -60,9 +60,11 @@ class Card: UIView {
         // cardLabel 設定
         cardLabel.text = cardName;
         cardLabel.numberOfLines = 3;
+        cardLabel.sizeToFit();
         cardLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping;
         cardLabel.textColor = UIColor.whiteColor();
         cardLabel.translatesAutoresizingMaskIntoConstraints = false;
+//        print(cardLabel.text);
         self.addSubview(cardLabel);
         
         // cardBtn 設定
@@ -128,7 +130,7 @@ class Card: UIView {
                 toItem: self,
                 attribute: NSLayoutAttribute.Trailing,
                 multiplier: 1.0,
-                constant: 6),
+                constant: -6),
             NSLayoutConstraint(
                 item: self.cardLabel,
                 attribute: NSLayoutAttribute.Top,
