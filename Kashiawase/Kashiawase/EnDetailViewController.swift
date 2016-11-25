@@ -13,6 +13,7 @@ class EnDetailViewController: UIViewController {
     
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var labelView: UIView!
     
     var labels: Array<UILabel>! = [];
     
@@ -47,8 +48,8 @@ class EnDetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        detailView.layer.masksToBounds = true;
-        detailView.layer.cornerRadius = 6;
+        labelView.layer.masksToBounds = true;
+        labelView.layer.cornerRadius = 6;
 //        detailView.layer.borderColor = gray.CGColor;
 //        detailView.layer.borderWidth = 1.0;
 //        imgView.layer.borderColor = gray.CGColor;
@@ -118,7 +119,7 @@ class EnDetailViewController: UIViewController {
         imgView.image = img;
         
         detailView.superview?.backgroundColor = bckColor[seasonTag - 1];
-        imgView.backgroundColor = bckColor[seasonTag - 1];
+//        imgView.backgroundColor = bckColor[seasonTag - 1];
         
         // 詳細表示
         print(contents);
@@ -135,21 +136,21 @@ class EnDetailViewController: UIViewController {
             nameLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping;
             nameLabel.translatesAutoresizingMaskIntoConstraints = false;
             
-            detailView.addSubview(nameLabel);
+            labelView.addSubview(nameLabel);
             
             if(i == 0){
-                detailView.addConstraints([
+                labelView.addConstraints([
                     NSLayoutConstraint(
                         item: nameLabel,
                         attribute: NSLayoutAttribute.Top,
                         relatedBy: NSLayoutRelation.Equal,
-                        toItem: imgView,
-                        attribute: NSLayoutAttribute.Bottom,
+                        toItem: labelView,
+                        attribute: NSLayoutAttribute.Top,
                         multiplier: 1.0,
                         constant: 24)
                     ])
             }else{
-                detailView.addConstraints([
+                labelView.addConstraints([
                     NSLayoutConstraint(
                         item: nameLabel,
                         attribute: NSLayoutAttribute.Top,
@@ -160,12 +161,12 @@ class EnDetailViewController: UIViewController {
                         constant: 24)
                     ])
             }
-            detailView.addConstraints([
+            labelView.addConstraints([
                 NSLayoutConstraint(
                     item: nameLabel,
                     attribute: NSLayoutAttribute.Leading,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: detailView,
+                    toItem: labelView,
                     attribute: NSLayoutAttribute.Leading,
                     multiplier: 1.0,
                     constant: 24),
@@ -174,7 +175,7 @@ class EnDetailViewController: UIViewController {
                     item: nameLabel,
                     attribute: NSLayoutAttribute.Trailing,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: detailView,
+                    toItem: labelView,
                     attribute: NSLayoutAttribute.Trailing,
                     multiplier: 1.0,
                     constant: -24)
@@ -187,9 +188,9 @@ class EnDetailViewController: UIViewController {
             contentLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping;
             contentLabel.translatesAutoresizingMaskIntoConstraints = false;
             
-            detailView.addSubview(contentLabel);
+            labelView.addSubview(contentLabel);
             
-            detailView.addConstraints([
+            labelView.addConstraints([
                 NSLayoutConstraint(
                     item: contentLabel,
                     attribute: NSLayoutAttribute.Top,
@@ -203,7 +204,7 @@ class EnDetailViewController: UIViewController {
                     item: contentLabel,
                     attribute: NSLayoutAttribute.Leading,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: detailView,
+                    toItem: labelView,
                     attribute: NSLayoutAttribute.Leading,
                     multiplier: 1.0,
                     constant: 24),
@@ -212,19 +213,19 @@ class EnDetailViewController: UIViewController {
                     item: contentLabel,
                     attribute: NSLayoutAttribute.Trailing,
                     relatedBy: NSLayoutRelation.Equal,
-                    toItem: detailView,
+                    toItem: labelView,
                     attribute: NSLayoutAttribute.Trailing,
                     multiplier: 1.0,
                     constant: -24)
                 ])
             
             if(i == labelName.endIndex - 1){
-                detailView.addConstraints([
+                labelView.addConstraints([
                     NSLayoutConstraint(
                         item: contentLabel,
                         attribute: NSLayoutAttribute.Bottom,
                         relatedBy: NSLayoutRelation.Equal,
-                        toItem: detailView,
+                        toItem: labelView,
                         attribute: NSLayoutAttribute.Bottom,
                         multiplier: 1.0,
                         constant: -24)
@@ -235,6 +236,8 @@ class EnDetailViewController: UIViewController {
             labels.append(contentLabel)
             
         }
+//        print(labels);
+        
         
     }
     
