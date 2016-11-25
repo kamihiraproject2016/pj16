@@ -20,13 +20,15 @@ class ConfigViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         //ナビゲーションバー設定
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0);
         let backBtn: UIBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil);
         self.navigationItem.backBarButtonItem = backBtn;
 
         //テーブル設定
-        tableView.backgroundColor = UIColor.grayColor();
+        tableView.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.96, alpha: 1.0);
         tableView.rowHeight = 50;
+        tableView.separatorStyle = .None;
+//        tableView.layer.borderColor = UIColor(red: 0.94, green: 0.94, blue: 0.96, alpha: 1.0).CGColor;
         
     }
     
@@ -41,7 +43,9 @@ class ConfigViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.accessoryType = .DisclosureIndicator;
         cell.textLabel!.text = "言語";
         cell.backgroundColor = UIColor.whiteColor();
-        cell.selectionStyle = UITableViewCellSelectionStyle.None;
+//        cell.tintColor = UIColor(red: 0.63, green: 0.63, blue: 0.64, alpha: 1.0);
+        
+        cell.layer.borderColor = UIColor(red: 0.94, green: 0.94, blue: 0.96, alpha: 1.0).CGColor;
         
         cells.append(cell);
         defaultLangSet();
@@ -51,6 +55,8 @@ class ConfigViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     /// セルが選択された時に呼ばれるデリゲートメソッド
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //選択を解除
+        tableView.deselectRowAtIndexPath(indexPath, animated: false);
         performSegueWithIdentifier("toConfigLang", sender: nil);
     }
 

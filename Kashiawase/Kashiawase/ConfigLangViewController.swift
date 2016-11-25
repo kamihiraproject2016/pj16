@@ -30,7 +30,7 @@ class ConfigLangViewController: UIViewController, UITableViewDelegate, UITableVi
         self.navigationItem.title = "設定";
         
         //テーブル設定
-        tableView.backgroundColor = UIColor.grayColor();
+        tableView.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.96, alpha: 1.0);
         tableView.rowHeight = 50;
         
         configLang = userDefault.stringForKey("lang");
@@ -85,7 +85,6 @@ class ConfigLangViewController: UIViewController, UITableViewDelegate, UITableVi
 
         print(langs[indexPath.row]);
     }
-    
 //    override func didMoveToParentViewController(parent: UIViewController?) {
 //        super.willMoveToParentViewController(parent);
 //        print(parent);
