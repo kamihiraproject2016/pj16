@@ -17,7 +17,7 @@ class TopViewController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var configView: UIView!;
     
     let unselectedImages = ["img/off_card.png", "", "img/off_gear.png"];
-    let selectedImages = ["img/on_card.png", "", "on/off_gear.png"];
+    let selectedImages = ["img/on_card.png", "", "img/on_gear.png"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +84,10 @@ class TopViewController: UIViewController, UITabBarDelegate {
             navi?.popToRootViewControllerAnimated(false);
         }
         print(self.childViewControllers);
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
     }
     
     override func didReceiveMemoryWarning() {
