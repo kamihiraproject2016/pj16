@@ -150,7 +150,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img/logo3.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2B-9Z-Jt0">
-                                <rect key="frame" x="47" y="93" width="282" height="282"/>
+                                <rect key="frame" x="104" y="150" width="168" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="X2B-9Z-Jt0" secondAttribute="height" multiplier="1:1" id="3Ge-hU-a3M"/>
                                 </constraints>
@@ -166,7 +166,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="71y-Wb-xuK" kind="custom" customClass="CustomSegue" customModule="Kashiawase" customModuleProvider="target" id="bML-di-TRK"/>
+                                    <action selector="startTap" destination="Tvb-W8-Kbp" eventType="touchUpInside" id="LRc-Wa-cr8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,7 +176,7 @@
                             <constraint firstItem="z6f-zn-TCt" firstAttribute="top" secondItem="ELn-w8-auU" secondAttribute="bottom" constant="25" id="7y5-qT-P7g"/>
                             <constraint firstItem="Ri7-Mo-Gyh" firstAttribute="width" secondItem="DTT-oW-leR" secondAttribute="width" multiplier="0.45" id="8dp-V4-4s3"/>
                             <constraint firstItem="l3u-co-IHh" firstAttribute="centerX" secondItem="DTT-oW-leR" secondAttribute="centerX" id="A4t-KR-NJb"/>
-                            <constraint firstItem="X2B-9Z-Jt0" firstAttribute="width" secondItem="DTT-oW-leR" secondAttribute="width" multiplier="0.75" id="C3H-cL-pXP"/>
+                            <constraint firstItem="X2B-9Z-Jt0" firstAttribute="width" secondItem="DTT-oW-leR" secondAttribute="width" multiplier="0.45" id="C3H-cL-pXP"/>
                             <constraint firstItem="z6f-zn-TCt" firstAttribute="top" secondItem="l3u-co-IHh" secondAttribute="bottom" constant="20" id="Gbx-tc-Eyy"/>
                             <constraint firstItem="Ri7-Mo-Gyh" firstAttribute="centerY" secondItem="DTT-oW-leR" secondAttribute="centerY" id="IKL-7g-Y6Q"/>
                             <constraint firstAttribute="trailing" secondItem="ELn-w8-auU" secondAttribute="trailing" constant="30" id="O8T-Ka-ABi"/>
@@ -192,6 +192,7 @@
                         <outlet property="logoView1" destination="Ri7-Mo-Gyh" id="FwV-Oa-6JS"/>
                         <outlet property="logoView2" destination="X2B-9Z-Jt0" id="CLd-8m-JjZ"/>
                         <outlet property="startBtn" destination="ELn-w8-auU" id="Mv0-6b-w9Y"/>
+                        <segue destination="71y-Wb-xuK" kind="custom" identifier="start" customClass="CustomSegue" customModule="Kashiawase" customModuleProvider="target" id="vjJ-Wc-cte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lh8-4y-DNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -477,12 +478,19 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsE-bu-bH0">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="218"/>
                                                     </imageView>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdx-lj-mPU">
+                                                        <rect key="frame" x="0.0" y="218" width="327" height="0.0"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="lsE-bu-bH0" firstAttribute="centerX" secondItem="8Wa-U1-nfD" secondAttribute="centerX" id="56i-7p-ZYD"/>
                                                     <constraint firstItem="lsE-bu-bH0" firstAttribute="width" secondItem="8Wa-U1-nfD" secondAttribute="width" id="AB4-cV-LXr"/>
+                                                    <constraint firstItem="sdx-lj-mPU" firstAttribute="top" secondItem="lsE-bu-bH0" secondAttribute="bottom" id="LAZ-Zz-dp5"/>
                                                     <constraint firstItem="lsE-bu-bH0" firstAttribute="height" secondItem="8Wa-U1-nfD" secondAttribute="width" multiplier="2:3" id="QCN-nA-uu6"/>
+                                                    <constraint firstItem="sdx-lj-mPU" firstAttribute="leading" secondItem="8Wa-U1-nfD" secondAttribute="leading" id="caz-9B-Kvp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sdx-lj-mPU" secondAttribute="trailing" id="hdD-z3-bKh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sdx-lj-mPU" secondAttribute="bottom" id="nvt-kF-9cZ"/>
                                                     <constraint firstItem="lsE-bu-bH0" firstAttribute="top" secondItem="8Wa-U1-nfD" secondAttribute="top" id="v8Q-91-wew"/>
                                                 </constraints>
                                             </view>
@@ -518,6 +526,7 @@
                     <connections>
                         <outlet property="detailView" destination="8Wa-U1-nfD" id="xUn-Rr-2as"/>
                         <outlet property="imgView" destination="lsE-bu-bH0" id="FjF-RR-9K0"/>
+                        <outlet property="labelView" destination="sdx-lj-mPU" id="MUC-8P-IBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSY-4L-qMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -548,13 +557,20 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JLL-CE-Do8">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="218"/>
                                                     </imageView>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-6O-yrd">
+                                                        <rect key="frame" x="0.0" y="218" width="327" height="289"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="JLL-CE-Do8" firstAttribute="height" secondItem="xPU-CM-Bsv" secondAttribute="width" multiplier="2:3" id="4V8-W1-QEi"/>
+                                                    <constraint firstItem="DM0-6O-yrd" firstAttribute="top" secondItem="JLL-CE-Do8" secondAttribute="bottom" id="6fa-OJ-kTR"/>
                                                     <constraint firstItem="JLL-CE-Do8" firstAttribute="top" secondItem="xPU-CM-Bsv" secondAttribute="top" id="8Xo-Vc-MSc"/>
                                                     <constraint firstItem="JLL-CE-Do8" firstAttribute="width" secondItem="xPU-CM-Bsv" secondAttribute="width" id="Egl-bv-DvO"/>
+                                                    <constraint firstItem="DM0-6O-yrd" firstAttribute="leading" secondItem="xPU-CM-Bsv" secondAttribute="leading" id="F4o-Di-qO4"/>
                                                     <constraint firstItem="JLL-CE-Do8" firstAttribute="centerX" secondItem="xPU-CM-Bsv" secondAttribute="centerX" id="LfS-rB-r9J"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DM0-6O-yrd" secondAttribute="trailing" id="O2H-N0-9U3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="DM0-6O-yrd" secondAttribute="bottom" id="aXt-ty-u4H"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -589,6 +605,7 @@
                     <connections>
                         <outlet property="detailView" destination="xPU-CM-Bsv" id="CV0-jT-6Gb"/>
                         <outlet property="imgView" destination="JLL-CE-Do8" id="Yyi-C4-yOW"/>
+                        <outlet property="labelView" destination="DM0-6O-yrd" id="obx-K1-AZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wex-tC-RAT" userLabel="First Responder" sceneMemberID="firstResponder"/>

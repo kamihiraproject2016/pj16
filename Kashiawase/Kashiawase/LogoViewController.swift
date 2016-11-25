@@ -32,6 +32,22 @@ class LogoViewController: UIViewController {
         }
     }
     
+    @IBAction func startTap() {
+//        let guruguru = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50));
+//        guruguru.center = self.view.center;
+//        guruguru.hidesWhenStopped = true;
+//        guruguru.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
+//        guruguru.backgroundColor = UIColor.grayColor();
+//        guruguru.layer.masksToBounds = true;
+//        guruguru.layer.cornerRadius = 5.0;
+//        guruguru.layer.opacity = 0.8;
+//        
+//        self.view.addSubview(guruguru);
+//        
+//        guruguru.startAnimating();
+        
+        performSegueWithIdentifier("start", sender: nil);
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
