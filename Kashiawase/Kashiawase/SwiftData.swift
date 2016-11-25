@@ -859,15 +859,44 @@ public struct SwiftData {
             
             // BEGING MODIFICATION
             let fileMan = NSFileManager.defaultManager()
-            if !(fileMan.fileExistsAtPath(dbPath)) {    // The database does not already exist in Documents directory
+            do{
+                let attr: NSDictionary = try fileMan.attributesOfItemAtPath(dbPath)
+                let date1: NSDate = attr.fileModificationDate()!;
+                print(attr.fileModificationDate());
+//                print(attr.fileSize());
                 if let source = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent(databaseStr) {
                     if !(fileMan.fileExistsAtPath(source)) {
                         print("SQLiteDB - file \(databaseStr) not found in bundle")
                     } else {
                         do{
-                            try fileMan.copyItemAtPath(source, toPath: dbPath);
+                            let sourceAttr: NSDictionary = try fileMan.attributesOfItemAtPath(source);
+                            print(sourceAttr.fileModificationDate());
+                            let date2: NSDate = sourceAttr.fileModificationDate()!;
+                            if ((date1.laterDate(date2)).isEqualToDate(date2)){
+                                print("Update DataBase");
+                                do{
+                                    try NSFileManager.defaultManager().removeItemAtPath(dbPath);
+                                    try fileMan.copyItemAtPath(source, toPath: dbPath);
+                                }catch{
+                                    print("SQLiteDB - failed to copy writable version of DB!")
+                                }
+                            }
                         }catch{
-                            print("SQLiteDB - failed to copy writable version of DB!")
+                            print("SQLiteDB - file \(databaseStr) not found in bundle")
+                        }
+                    }
+                }
+            }catch{
+                if !(fileMan.fileExistsAtPath(dbPath)) {    // The database does not already exist in Documents directory
+                    if let source = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent(databaseStr) {
+                        if !(fileMan.fileExistsAtPath(source)) {
+                            print("SQLiteDB - file \(databaseStr) not found in bundle")
+                        } else {
+                            do{
+                                try fileMan.copyItemAtPath(source, toPath: dbPath);
+                            }catch{
+                                print("SQLiteDB - failed to copy writable version of DB!")
+                            }
                         }
                     }
                 }
