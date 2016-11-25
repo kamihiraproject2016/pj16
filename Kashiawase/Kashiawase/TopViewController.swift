@@ -74,8 +74,16 @@ class TopViewController: UIViewController, UITabBarDelegate {
             configView.hidden = false;
         default:
             return;
-            
         }
+        
+        if(gameView.hidden == false){
+            let navi = self.childViewControllers[0] as? UINavigationController;
+            navi?.popToRootViewControllerAnimated(false);
+        }else if(configView.hidden == false){
+            let navi = self.childViewControllers[2] as? UINavigationController;
+            navi?.popToRootViewControllerAnimated(false);
+        }
+        print(self.childViewControllers);
     }
     
     override func didReceiveMemoryWarning() {
