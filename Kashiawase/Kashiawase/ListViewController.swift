@@ -19,16 +19,6 @@ class ListViewController: UIViewController {
     let seasonTitle: Array<String> = ["春のカード", "夏のカード", "秋のカード", "冬のカード", "通年のカード"];
     let seasons: Array<String> = ["春", "夏", "秋", "冬", "通年"];
     
-    // 色データ
-//    let seasonColor: Array<UIColor> = [
-//        UIColor(red: 0.94, green: 0.71, blue: 0.76, alpha: 1.0), //春
-//        UIColor(red: 0.71, green: 0.84, blue: 0.48, alpha: 1.0), //夏
-//        UIColor(red: 0.96, green: 0.69, blue: 0.44, alpha: 1.0), //秋
-//        UIColor(red: 0.49, green: 0.68, blue: 0.81, alpha: 1.0), //冬
-//        UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.0)  //通年
-//    ];
-//    let gray: UIColor = UIColor(red: 0.69, green: 0.69, blue: 0.70, alpha: 1.0);
-
     // テストデータ
 //    var cardId: Array<Int> = [1, 2, 3];
 //    var cardName: Array<String> = ["あんみつ", "あわだま", "ひなまつり"];

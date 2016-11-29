@@ -12,9 +12,14 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (UIViewAppearance_Swift)
-
+// appearanceWhenContainedIn: is not available in Swift. This fixes that.
 + (instancetype)my_appearanceWhenContainedIn:(Class<UIAppearanceContainer>)containerClass;
-
 @end
+
+@interface UIBarItem (UIViewAppearance_Swift)
+// appearanceWhenContainedIn: is not available in Swift. This fixes that.
++ (instancetype)my_appearanceWhenContainedIn:(Class<UIAppearanceContainer>)containerClass;
+@end
+
 
 #endif /* UIAppearance_Swift_h */

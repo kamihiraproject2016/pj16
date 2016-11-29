@@ -42,7 +42,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
         searchBar.layer.borderWidth = 1.0;
         searchBar.placeholder = "お菓子、行事の検索";
         searchBar.tintColor = UIColor.whiteColor();
-        UITextField.my_appearanceWhenContainedIn(UISearchBar.self).tintColor = UIColor.blueColor()
+        UITextField.my_appearanceWhenContainedIn(UISearchBar.self).tintColor = UIColor.blueColor();
         
         //季節のカードの作成
         for(var i = 0; i < 5; i++){
