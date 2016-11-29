@@ -163,6 +163,7 @@ class Icon: UIView {
                 attribute: NSLayoutAttribute.Height,
                 multiplier: 1.0,
                 constant: 1.0)
+
             ])
     }
     

@@ -14,7 +14,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var listView: UIView!
     
     var titleLabels: Array<UILabel> = [];
-    
     var icons: Array<Array<Icon>> = [];
     
     // 色データ
@@ -44,28 +43,19 @@ class GameViewController: UIViewController {
             let iconsView = UIView();
             
             // groupView設定
-//            groupView.backgroundColor = gray;
-            
-            listView.addSubview(groupView);
             groupView.translatesAutoresizingMaskIntoConstraints = false;
+//            groupView.backgroundColor = UIColor.grayColor();
+            listView.addSubview(groupView);
             
             listView.addConstraints([
                 NSLayoutConstraint(
                     item: groupView,
-                    attribute: NSLayoutAttribute.Leading,
+                    attribute: NSLayoutAttribute.CenterX,
                     relatedBy: NSLayoutRelation.Equal,
                     toItem: listView,
-                    attribute: NSLayoutAttribute.Leading,
+                    attribute: NSLayoutAttribute.CenterX,
                     multiplier: 1.0,
-                    constant: 24),
-                NSLayoutConstraint(
-                    item: groupView,
-                    attribute: NSLayoutAttribute.Trailing,
-                    relatedBy: NSLayoutRelation.Equal,
-                    toItem: listView,
-                    attribute: NSLayoutAttribute.Trailing,
-                    multiplier: 1.0,
-                    constant: 24),
+                    constant: 0),
                 NSLayoutConstraint(
                     item: groupView,
                     attribute: NSLayoutAttribute.Width,
@@ -73,7 +63,7 @@ class GameViewController: UIViewController {
                     toItem: listView,
                     attribute: NSLayoutAttribute.Width,
                     multiplier: 1.0,
-                    constant: -CGFloat(24*2))
+                    constant: -48)
                 ]);
             
             if(i == 0){
@@ -136,7 +126,7 @@ class GameViewController: UIViewController {
             labelView.translatesAutoresizingMaskIntoConstraints = false;
             labelView.layer.cornerRadius = 6;
             labelView.layer.masksToBounds = true;
-            
+
             // view設定
             iconsView.backgroundColor = seasonColor[i / 2];
             iconsView.translatesAutoresizingMaskIntoConstraints = false;
@@ -167,7 +157,9 @@ class GameViewController: UIViewController {
                         toItem: groupView,
                         attribute: NSLayoutAttribute.Top,
                         multiplier: 1.0,
-                        constant: 0),
+                        constant: 0)
+                    ])
+                groupView.addConstraints([
                     NSLayoutConstraint(
                         item: iconsView,
                         attribute: NSLayoutAttribute.Top,
@@ -213,7 +205,9 @@ class GameViewController: UIViewController {
                         toItem: groupView,
                         attribute: NSLayoutAttribute.Bottom,
                         multiplier: 1.0,
-                        constant: 0),
+                        constant: 0)
+                    ])
+                groupView.addConstraints([
                     NSLayoutConstraint(
                         item: iconsView,
                         attribute: NSLayoutAttribute.Top,
@@ -270,7 +264,9 @@ class GameViewController: UIViewController {
                     toItem: label,
                     attribute: NSLayoutAttribute.Height,
                     multiplier: 1.0,
-                    constant: CGFloat(6 + 10)),
+                    constant: CGFloat(6 + 10))
+                ])
+            groupView.addConstraints([
                 NSLayoutConstraint(
                     item: iconsView,
                     attribute: NSLayoutAttribute.Width,
@@ -296,72 +292,126 @@ class GameViewController: UIViewController {
                     multiplier: 1.0,
                     constant: 0)
                 ])
-            
-            // icon設定
-            for(var j = 0; j < 4; j++){
-                let icon = Icon();
-                iconsView.addSubview(icon);
-                groupIcons.append(icon);
-                
-                icon.iconItemSet();
-                icon.iconBtn.addTarget(self, action: "iconTap:", forControlEvents: .TouchUpInside)
-                
-                if(i % 2 == 0){
-                    iconsView.addConstraints([
-                        NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Top,
-                            relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView,
-                            attribute: NSLayoutAttribute.Top,
-                            multiplier: 1.0,
-                            constant: 5),
-                        NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Bottom,
-                            relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView,
-                            attribute: NSLayoutAttribute.Bottom,
-                            multiplier: 1.0,
-                            constant: 0)
 
-                        ])
+            // icon設定
+            for(var j = 0; j < 7; j++){
+                if(j % 2 == 0){
+                    let icon = Icon();
+                    iconsView.addSubview(icon);
+                    groupIcons.append(icon);
+                    
+                    icon.iconItemSet();
+                    icon.iconBtn.addTarget(self, action: "iconTap:", forControlEvents: .TouchUpInside);
+                    
+                    if(i % 2 == 0){
+                        iconsView.addConstraints([
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Top,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView,
+                                attribute: NSLayoutAttribute.Top,
+                                multiplier: 1.0,
+                                constant: 5),
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Bottom,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView,
+                                attribute: NSLayoutAttribute.Bottom,
+                                multiplier: 1.0,
+                                constant: 0)
+                            ])
+                    }else{
+                        iconsView.addConstraints([
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Top,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView,
+                                attribute: NSLayoutAttribute.Top,
+                                multiplier: 1.0,
+                                constant: 0),
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Bottom,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView,
+                                attribute: NSLayoutAttribute.Bottom,
+                                multiplier: 1.0,
+                                constant: -5)
+                            ])
+                        
+                    }
+                    if(j == 0){
+                        iconsView.addConstraints([
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Leading,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView,
+                                attribute: NSLayoutAttribute.Leading,
+                                multiplier: 1.0,
+                                constant: 0)
+                            ])
+                    }else{
+                        iconsView.addConstraints([
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Leading,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView.subviews[j - 1],
+                                attribute: NSLayoutAttribute.Trailing,
+                                multiplier: 1.0,
+                                constant: 0),
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Width,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView.subviews[0],
+                                attribute: NSLayoutAttribute.Width,
+                                multiplier: 1.0,
+                                constant: 0)
+                            ])
+                    }
+                    if(j == 6){
+                        iconsView.addConstraints([
+                            NSLayoutConstraint(
+                                item: icon,
+                                attribute: NSLayoutAttribute.Trailing,
+                                relatedBy: NSLayoutRelation.Equal,
+                                toItem: iconsView,
+                                attribute: NSLayoutAttribute.Trailing,
+                                multiplier: 1.0,
+                                constant: 0)
+                            ])
+                    }
+
                 }else{
+                    let mini = UIView();
+                    mini.backgroundColor = UIColor.whiteColor();
+                    mini.translatesAutoresizingMaskIntoConstraints = false;
+                    iconsView.addSubview(mini);
+                    
                     iconsView.addConstraints([
                         NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Top,
+                            item: mini,
+                            attribute: NSLayoutAttribute.Width,
                             relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView,
-                            attribute: NSLayoutAttribute.Top,
+                            toItem: nil,
+                            attribute: NSLayoutAttribute.NotAnAttribute,
+                            multiplier: 1.0,
+                            constant: 1),
+                        NSLayoutConstraint(
+                            item: mini,
+                            attribute: NSLayoutAttribute.CenterY,
+                            relatedBy: NSLayoutRelation.Equal,
+                            toItem: iconsView.subviews[j - 1],
+                            attribute: NSLayoutAttribute.CenterY,
                             multiplier: 1.0,
                             constant: 0),
                         NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Bottom,
-                            relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView,
-                            attribute: NSLayoutAttribute.Bottom,
-                            multiplier: 1.0,
-                            constant: -5)
-                        ])
-                    
-                }
-                if(j == 0){
-                    iconsView.addConstraints([
-                        NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Leading,
-                            relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView,
-                            attribute: NSLayoutAttribute.Leading,
-                            multiplier: 1.0,
-                            constant: 0)
-                        ])
-                }else{
-                    iconsView.addConstraints([
-                        NSLayoutConstraint(
-                            item: icon,
+                            item: mini,
                             attribute: NSLayoutAttribute.Leading,
                             relatedBy: NSLayoutRelation.Equal,
                             toItem: iconsView.subviews[j - 1],
@@ -369,29 +419,19 @@ class GameViewController: UIViewController {
                             multiplier: 1.0,
                             constant: 0),
                         NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Width,
+                            item: mini,
+                            attribute: NSLayoutAttribute.Height,
                             relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView.subviews[0],
-                            attribute: NSLayoutAttribute.Width,
-                            multiplier: 1.0,
-                            constant: 0)
-                        ])
-                }
-                if(j == 3){
-                    iconsView.addConstraints([
-                        NSLayoutConstraint(
-                            item: icon,
-                            attribute: NSLayoutAttribute.Trailing,
-                            relatedBy: NSLayoutRelation.Equal,
-                            toItem: iconsView,
-                            attribute: NSLayoutAttribute.Trailing,
+                            toItem: iconsView.subviews[j - 1],
+                            attribute: NSLayoutAttribute.Height,
                             multiplier: 1.0,
                             constant: 0)
                         ])
                 }
             }
             icons.append(groupIcons);
+            print("check");
+            print(iconsView.subviews);
         }
         shuffle();
     }
