@@ -16,8 +16,8 @@ class TopViewController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var databaseView: UIView!;
     @IBOutlet weak var configView: UIView!;
     
-    let unselectedImages = ["img/off_card.png", "", "img/off_gear.png"];
-    let selectedImages = ["img/on_card.png", "", "img/on_gear.png"];
+    let unselectedImages = ["img/off_list.png", "img/off_card.png", "img/off_gear.png"];
+    let selectedImages = ["img/on_list.png", "img/on_card.png", "img/on_gear.png"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
