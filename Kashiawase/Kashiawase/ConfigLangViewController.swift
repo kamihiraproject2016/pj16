@@ -95,9 +95,19 @@ class ConfigLangViewController: UIViewController, UITableViewDelegate, UITableVi
         if(lang == "日本語"){
             self.title = "設定";
 //            cells[0].textLabel?.text = "言語";
+            if(systemDefault == "日本語"){
+                cells[0].detailTextLabel?.text = "システムデフォルト";
+            }else{
+                cells[1].detailTextLabel?.text = "システムデフォルト";
+            }
         }else{
             self.title = "Config";
 //            cells[0].textLabel?.text = "Language";
+            if(systemDefault == "日本語"){
+                cells[0].detailTextLabel?.text = "SystemDefault";
+            }else{
+                cells[1].detailTextLabel?.text = "SystemDefault";
+            }
         }
         
         let top: TopViewController = self.parentViewController?.parentViewController as! TopViewController;
