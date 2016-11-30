@@ -35,7 +35,7 @@ class CustomSegue: UIStoryboardSegue{
 //        guruguru.startAnimating();
 
         source.view.addSubview(destination.view);
-        
+
         UIView.animateWithDuration(2.0, animations: { () -> Void in
             for subview in self.source.view.subviews{
                 subview.alpha = 0.0;

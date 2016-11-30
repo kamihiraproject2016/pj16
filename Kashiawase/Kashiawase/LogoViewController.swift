@@ -16,6 +16,8 @@ class LogoViewController: UIViewController {
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
+    var guruguru: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,21 +35,25 @@ class LogoViewController: UIViewController {
     }
     
     @IBAction func startTap() {
-//        let guruguru = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50));
-//        guruguru.center = self.view.center;
-//        guruguru.hidesWhenStopped = true;
-//        guruguru.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
-//        guruguru.backgroundColor = UIColor.grayColor();
-//        guruguru.layer.masksToBounds = true;
-//        guruguru.layer.cornerRadius = 5.0;
-//        guruguru.layer.opacity = 0.8;
-//        
-//        self.view.addSubview(guruguru);
-//        
-//        guruguru.startAnimating();
-
+        guruguru = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50));
+        guruguru.center = self.view.center;
+        guruguru.hidesWhenStopped = true;
+        guruguru.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
+        guruguru.backgroundColor = UIColor.grayColor();
+        guruguru.layer.masksToBounds = true;
+        guruguru.layer.cornerRadius = 5.0;
+        guruguru.layer.opacity = 0.8;
         
-        performSegueWithIdentifier("start", sender: nil);
+        self.view.addSubview(guruguru);
+        
+        guruguru.startAnimating();
+        
+        let delay = 0.02 * Double(NSEC_PER_SEC);
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay)), dispatch_get_main_queue(), { () -> Void in
+            self.performSegueWithIdentifier("start", sender: nil);
+            self.guruguru.stopAnimating();
+        });
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
