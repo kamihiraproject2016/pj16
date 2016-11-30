@@ -84,18 +84,30 @@ class ConfigLangViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark;
 
         print(langs[indexPath.row]);
+        defaultLangSet();
     }
-//    override func didMoveToParentViewController(parent: UIViewController?) {
-//        super.willMoveToParentViewController(parent);
-//        print(parent);
-//        print(self);
-//        if(parent == nil){
-//            let vc = presentingViewController as! ConfigViewController!;
-//            print(vc);
-////            vc.defaultLangSet();
-//
-//        }
-//    }
+    
+    func defaultLangSet(){
+        let lang: String! = userDefault.stringForKey("lang");
+        print(lang);
+        
+//        cells[0].detailTextLabel?.text = lang;
+        if(lang == "日本語"){
+            self.title = "設定";
+//            cells[0].textLabel?.text = "言語";
+        }else{
+            self.title = "Config";
+//            cells[0].textLabel?.text = "Language";
+        }
+        
+        let top: TopViewController = self.parentViewController?.parentViewController as! TopViewController;
+        top.langSet();
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        defaultLangSet();
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

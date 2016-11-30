@@ -14,8 +14,6 @@ class ConfigViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     var cells: Array<UITableViewCell> = [];
     
-    let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,15 +59,24 @@ class ConfigViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func defaultLangSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
         let lang: String! = userDefault.stringForKey("lang");
         print(lang);
         
         cells[0].detailTextLabel?.text = lang;
+        if(lang == "日本語"){
+            self.title = "設定";
+            cells[0].textLabel?.text = "言語";
+        }else{
+            self.title = "Config";
+            cells[0].textLabel?.text = "Language";
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         defaultLangSet();
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

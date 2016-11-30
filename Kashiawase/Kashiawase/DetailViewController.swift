@@ -38,6 +38,7 @@ class DetailViewController: UIViewController, UITabBarDelegate {
     ];
 
     var cardName: String!;
+    var cardEnName: String!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,7 @@ class DetailViewController: UIViewController, UITabBarDelegate {
         } else {
             for row in results{
                 cardName = row["name"]?.asString()!;
+                cardEnName = row["name_en"]?.asString()!;
                 season = row["season"]?.asInt()!;
                 season = season - 1;
             }
@@ -121,6 +123,28 @@ class DetailViewController: UIViewController, UITabBarDelegate {
             en.cardId = cardId;
             en.eventFlag = eventFlag;
         }
+    }
+
+    func langSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        let lang: String! = userDefault.stringForKey("lang");
+        print(lang);
+        
+        if(lang == "日本語"){
+            self.title = cardName;
+            JpnView.hidden = false;
+            EnView.hidden = true;
+            ChangeTabBar.selectedItem = ChangeTabBar.items![0];
+        }else{
+            self.title = cardEnName;
+            JpnView.hidden = true;
+            EnView.hidden = false;
+            ChangeTabBar.selectedItem = ChangeTabBar.items![1];
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        langSet();
     }
 
     override func didReceiveMemoryWarning() {

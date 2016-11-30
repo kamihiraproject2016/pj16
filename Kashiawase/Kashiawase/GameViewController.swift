@@ -15,6 +15,9 @@ class GameViewController: UIViewController {
     
     var titleLabels: Array<UILabel> = [];
     var icons: Array<Array<Icon>> = [];
+    var alertTitle = "";
+    var okTitle = "";
+    var noTitle = "";
     
     // 色データ
     let seasonColor: Array<UIColor> = [
@@ -481,13 +484,13 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func updateBtn(sender: UIBarButtonItem) {
-        let alert: UIAlertController = UIAlertController(title: "新しくゲームを始めますか？", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert: UIAlertController = UIAlertController(title: alertTitle, message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
-        let okBtn: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.Default, handler: {
+        let okBtn: UIAlertAction = UIAlertAction(title: okTitle, style: UIAlertActionStyle.Default, handler: {
             (action: UIAlertAction!) -> Void in
             self.shuffle();
         })
-        let cancelBtn: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.Cancel, handler: {
+        let cancelBtn: UIAlertAction = UIAlertAction(title: noTitle, style: UIAlertActionStyle.Cancel, handler: {
             (action: UIAlertAction!) -> Void in
         })
         
@@ -503,6 +506,31 @@ class GameViewController: UIViewController {
             let detail: DetailViewController = segue.destinationViewController as! DetailViewController;
             detail.cardId = sender!.tag;
         }
+    }
+
+    func langSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        let lang: String! = userDefault.stringForKey("lang");
+        print(lang);
+        
+        //        cells[0].detailTextLabel?.text = lang;
+        if(lang == "日本語"){
+            self.title = "ゲーム";
+            alertTitle = "新しくゲームを始めますか？";
+            okTitle = "はい";
+            noTitle = "いいえ";
+            //            cells[0].textLabel?.text = "言語";
+        }else{
+            self.title = "Game";
+            alertTitle = " Do you start a new game?";
+            okTitle = "OK";
+            noTitle = "Cancel";
+            //            cells[0].textLabel?.text = "Language";
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        langSet();
     }
 
     override func didReceiveMemoryWarning() {

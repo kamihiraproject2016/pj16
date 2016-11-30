@@ -64,30 +64,80 @@ class TopViewController: UIViewController, UITabBarDelegate {
             gameView.hidden = true;
             databaseView.hidden = false;
             configView.hidden = true;
+
+            let navi = self.childViewControllers[1] as? UINavigationController;
+            print(self.childViewControllers[1].childViewControllers);
+            
+            if(navi?.childViewControllers.count > 0){
+                if let database = navi?.childViewControllers[0] as? DataBaseTopViewController{
+                    database.langSet();
+                    print(database);
+                }
+                if(navi?.childViewControllers.count > 1){
+                    if let database = navi?.childViewControllers[1] as? ListViewController{
+                        database.langSet();
+                        print(database);
+                    }
+                    if(navi?.childViewControllers.count > 2){
+                        if let database = navi?.childViewControllers[2] as? DetailViewController{
+                            database.langSet();
+                            print(database);
+                        }
+
+                    }
+                }
+            }
+
+            
         case 2: //ゲーム画面表示
             gameView.hidden = false;
             databaseView.hidden = true;
             configView.hidden = true;
+
+            let navi = self.childViewControllers[0] as? UINavigationController;
+            navi?.popToRootViewControllerAnimated(false);
+            let game = navi?.childViewControllers[0] as? GameViewController;
+            game!.langSet();
+            
         case 3: //設定画面
             gameView.hidden = true;
             databaseView.hidden = true;
             configView.hidden = false;
+            
+            let navi = self.childViewControllers[2] as? UINavigationController;
+            navi?.popToRootViewControllerAnimated(false);
+            
         default:
             return;
         }
         
-        if(gameView.hidden == false){
-            let navi = self.childViewControllers[0] as? UINavigationController;
-            navi?.popToRootViewControllerAnimated(false);
-        }else if(configView.hidden == false){
-            let navi = self.childViewControllers[2] as? UINavigationController;
-            navi?.popToRootViewControllerAnimated(false);
+//        print(self.childViewControllers);
+    }
+    
+    func langSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        let lang: String! = userDefault.stringForKey("lang");
+        print(lang);
+        
+//        cells[0].detailTextLabel?.text = lang;
+        if(lang == "日本語"){
+            topTabBar.items?[0].title = "カード一覧";
+            topTabBar.items?[1].title = "ゲーム";
+            topTabBar.items?[2].title = "設定";
+            self.title = "設定";
+//            cells[0].textLabel?.text = "言語";
+        }else{
+            topTabBar.items?[0].title = "Cards";
+            topTabBar.items?[1].title = "Game";
+            topTabBar.items?[2].title = "Config";
+            self.title = "Config";
+//            cells[0].textLabel?.text = "Language";
         }
-        print(self.childViewControllers);
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+
+        langSet();
     }
     
     override func didReceiveMemoryWarning() {

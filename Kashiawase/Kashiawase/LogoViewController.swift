@@ -45,9 +45,15 @@ class LogoViewController: UIViewController {
 //        self.view.addSubview(guruguru);
 //        
 //        guruguru.startAnimating();
+
         
         performSegueWithIdentifier("start", sender: nil);
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
