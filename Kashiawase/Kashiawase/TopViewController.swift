@@ -16,8 +16,8 @@ class TopViewController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var databaseView: UIView!;
     @IBOutlet weak var configView: UIView!;
     
-    let unselectedImages = ["img/off_list.png", "img/off_card.png", "img/off_gear.png"];
-    let selectedImages = ["img/on_list.png", "img/on_card.png", "img/on_gear.png"];
+    let unselectedImages = ["OffIcon1", "OffIcon2", "OffIcon3"];
+    let selectedImages = ["OnIcon1", "OnIcon2", "OnIcon3"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,8 @@ class TopViewController: UIViewController, UITabBarDelegate {
             var img2 = UIImage(named: unselectedImages[item.tag - 1]);
             img2 = img2?.imageWithRenderingMode(.AlwaysOriginal);
             item.image = img2;
+            
+            UITabBar.appearance().tintColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0);
         }
 
         
