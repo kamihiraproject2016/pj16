@@ -435,13 +435,17 @@ class GameViewController: UIViewController {
                 }
             }
             icons.append(groupIcons);
-            print("check");
-            print(iconsView.subviews);
+//            print("check");
+//            print(iconsView.subviews);
         }
         shuffle();
     }
     
     func shuffle(){
+        groupNames = [];
+        groupEnNames = [];
+//        print(groupNames);
+//        print(groupEnNames);
         for(var i = 0; i < 4; i++){
             var (results, err) = SD.executeQuery("SELECT * FROM db_groups WHERE season = " + String(i + 1));
             if err != nil{
@@ -482,6 +486,7 @@ class GameViewController: UIViewController {
                 }
             }
         }
+        labelSet();
     }
     
     @IBAction func iconTap(sender: UIButton){
@@ -517,7 +522,7 @@ class GameViewController: UIViewController {
     func langSet(){
         let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
         let lang: String! = userDefault.stringForKey("lang");
-        print(lang);
+//        print(lang);
         
         //        cells[0].detailTextLabel?.text = lang;
         if(lang == "日本語"){
@@ -525,15 +530,28 @@ class GameViewController: UIViewController {
             alertTitle = "新しくゲームを始めますか？";
             okTitle = "はい";
             noTitle = "いいえ";
-            for(var i = 0; i < titleLabels.count; i++){
-                titleLabels[i].text = groupNames[i];
-            }
             //            cells[0].textLabel?.text = "言語";
         }else{
             self.title = "Game";
             alertTitle = " Do you start a new game?";
             okTitle = "OK";
             noTitle = "Cancel";
+            //            cells[0].textLabel?.text = "Language";
+        }
+        
+        labelSet();
+    }
+    
+    func labelSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        let lang: String! = userDefault.stringForKey("lang");
+
+        if(lang == "日本語"){
+            for(var i = 0; i < titleLabels.count; i++){
+                titleLabels[i].text = groupNames[i];
+            }
+            //            cells[0].textLabel?.text = "言語";
+        }else{
             for(var i = 0; i < titleLabels.count; i++){
                 titleLabels[i].text = groupEnNames[i];
             }
