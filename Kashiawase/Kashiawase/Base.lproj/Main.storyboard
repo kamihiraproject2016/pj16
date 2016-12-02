@@ -368,7 +368,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ゲーム" id="vWX-58-gry">
-                        <barButtonItem key="rightBarButtonItem" image="img/newgame.png" id="A9Z-nt-WIQ">
+                        <barButtonItem key="rightBarButtonItem" image="UpdateIcon" id="A9Z-nt-WIQ">
                             <connections>
                                 <action selector="updateBtn:" destination="Edf-mS-EIl" id="FSs-eg-eAM"/>
                             </connections>
@@ -726,9 +726,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="UpdateIcon" width="30" height="30"/>
         <image name="img/logo.png" width="1721" height="1735"/>
         <image name="img/logo3.png" width="1721" height="1735"/>
-        <image name="img/newgame.png" width="1721" height="1735"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4EP-mA-soc"/>
