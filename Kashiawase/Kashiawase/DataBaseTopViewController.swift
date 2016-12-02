@@ -40,7 +40,6 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
         searchBar.barTintColor = UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1.0);
         searchBar.layer.borderColor = UIColor(red: 0.78, green: 0.78, blue: 0.80, alpha: 1.0).CGColor;
         searchBar.layer.borderWidth = 1.0;
-        searchBar.placeholder = "お菓子、行事の検索";
         searchBar.tintColor = UIColor.whiteColor();
         UITextField.my_appearanceWhenContainedIn(UISearchBar.self).tintColor = UIColor.blueColor();
         
@@ -222,6 +221,24 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
         }
     }
 
+    func langSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        let lang: String! = userDefault.stringForKey("lang");
+        print(lang);
+        
+        if(lang == "日本語"){
+            searchBar.placeholder = "お菓子、行事の検索";
+            self.title = "かしあわせ";
+        }else{
+            searchBar.placeholder = "Search for Sweets or Event";
+            self.title = "Kashiawase";
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        langSet();
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        print(sender)
         // tag 1:春、2:夏、3:秋、4:冬、5:通年

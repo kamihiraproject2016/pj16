@@ -17,6 +17,7 @@ class ListViewController: UIViewController {
     // 1:春、2:夏、3:秋、4:冬、5:通年
     var season: Int!;
     let seasonTitle: Array<String> = ["春のカード", "夏のカード", "秋のカード", "冬のカード", "通年のカード"];
+    let seasonEnTitle: Array<String> = ["Spring", "Summer", "Autumn", "Winter", "All year around"];
     let seasons: Array<String> = ["春", "夏", "秋", "冬", "通年"];
     
     // テストデータ
@@ -85,6 +86,22 @@ class ListViewController: UIViewController {
         }
     }
     
+    func langSet(){
+        let userDefault: NSUserDefaults = NSUserDefaults.standardUserDefaults();
+        let lang: String! = userDefault.stringForKey("lang");
+        print(lang);
+        
+        if(lang == "日本語"){
+            self.title = seasonTitle[season];
+        }else{
+            self.title = seasonEnTitle[season];
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        langSet();
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
