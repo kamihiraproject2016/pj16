@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var listView: UIView!
     
     var titleLabels: Array<UILabel> = [];
+    var groupNames: Array<String> = [];
+    var groupEnNames: Array<String> = [];
     var icons: Array<Array<Icon>> = [];
     var alertTitle = "";
     var okTitle = "";
@@ -444,17 +446,21 @@ class GameViewController: UIViewController {
             var (results, err) = SD.executeQuery("SELECT * FROM db_groups WHERE season = " + String(i + 1));
             if err != nil{
             } else {
-                for(var k = 0; k < 1; k++){
+                for(var k = 0; k < 2; k++){
+                    print(k);
                     let random = Int(arc4random_uniform(UInt32(results.count)));
                     
                     let groupName = results[random]["name"]?.asString()!;
+                    let groupEnName = results[random]["name_en"]?.asString()!;
                     var cardIds: Array<Int> = [];
                     cardIds.append((results[random]["sweets_1st_id"]?.asInt())!);
                     cardIds.append((results[random]["sweets_2nd_id"]?.asInt())!);
                     cardIds.append((results[random]["sweets_3rd_id"]?.asInt())!);
                     cardIds.append((results[random]["event_id"]?.asInt())!);
                     
-                    titleLabels[i].text = groupName;
+                    groupNames.append(groupName!);
+                    groupEnNames.append(groupEnName!);
+                    
                     //                print(groupName);
                     //                print(cardIds);
                     
@@ -465,8 +471,8 @@ class GameViewController: UIViewController {
 //                            print(res);
                             for row in res{
                                 if let img = row["illust"]?.asString(){
-                                    icons[i][j].iconImgView.image = UIImage(named: "img/" + img);
-                                    icons[i][j].iconBtn.tag = (row["card_id"]?.asInt())!;
+                                    icons[i * 2 + k][j].iconImgView.image = UIImage(named: "img/" + img);
+                                    icons[i * 2 + k][j].iconBtn.tag = (row["card_id"]?.asInt())!;
                                 }
                             }
                         }
@@ -519,12 +525,18 @@ class GameViewController: UIViewController {
             alertTitle = "新しくゲームを始めますか？";
             okTitle = "はい";
             noTitle = "いいえ";
+            for(var i = 0; i < titleLabels.count; i++){
+                titleLabels[i].text = groupNames[i];
+            }
             //            cells[0].textLabel?.text = "言語";
         }else{
             self.title = "Game";
             alertTitle = " Do you start a new game?";
             okTitle = "OK";
             noTitle = "Cancel";
+            for(var i = 0; i < titleLabels.count; i++){
+                titleLabels[i].text = groupEnNames[i];
+            }
             //            cells[0].textLabel?.text = "Language";
         }
     }
