@@ -548,11 +548,13 @@ class GameViewController: UIViewController {
 
         if(lang == "日本語"){
             for(var i = 0; i < titleLabels.count; i++){
+                titleLabels[i].font = UIFont.systemFontOfSize(16);
                 titleLabels[i].text = groupNames[i];
             }
             //            cells[0].textLabel?.text = "言語";
         }else{
             for(var i = 0; i < titleLabels.count; i++){
+                titleLabels[i].font = UIFont.systemFontOfSize(14);
                 titleLabels[i].text = groupEnNames[i];
             }
             //            cells[0].textLabel?.text = "Language";

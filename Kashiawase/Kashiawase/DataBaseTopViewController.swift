@@ -204,7 +204,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
                     let cardImgName = "img/" + (row["illust"]?.asString()!)!;
                     let seasonTag = row["season"]?.asInt()!;
                     
-                    let cardView: Card = Card(name: cardName! + "\n" + cardEnName!, imgName: cardImgName, season: seasonTag!, id: cardId);
+                    let cardView: Card = Card(name: cardName! + "\n" + cardEnName!, imgName: cardImgName, season: seasonTag! - 1, id: cardId);
                     
                     listView.addSubview(cardView);
                     searchCards.append(cardView);
