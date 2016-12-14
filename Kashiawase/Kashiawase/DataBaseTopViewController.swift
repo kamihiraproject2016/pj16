@@ -21,7 +21,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
     
     //季節のカードデータ
     let cardName: Array<String>! = ["春のカード\nSpring", "夏のカード\nSummer", "秋のカード\nAutumn", "冬のカード\nWinter", "通年のカード\nAll year around"];
-    let cardImgName: Array<String>! = ["img/ひなあられ.png", "img/あんみつ.png", "img/おつきみのひ.png", "img/はなびらもち.png", "img/たいやき.png"];
+    let cardImgName: Array<String>! = ["img/さんしょくだんご.png", "img/あんみつ.png", "img/だいがくいも.png", "img/まめだいふく.png", "img/たいやき.png"];
     
     var modalView: UIView!;
     var searchTextLabel: UILabel!;
