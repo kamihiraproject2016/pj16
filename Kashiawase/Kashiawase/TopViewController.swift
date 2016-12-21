@@ -68,6 +68,7 @@ class TopViewController: UIViewController, UITabBarDelegate {
             configView.hidden = true;
 
             let navi = self.childViewControllers[1] as? UINavigationController;
+            navi?.popToRootViewControllerAnimated(false);
             print(self.childViewControllers[1].childViewControllers);
             
             if(navi?.childViewControllers.count > 0){

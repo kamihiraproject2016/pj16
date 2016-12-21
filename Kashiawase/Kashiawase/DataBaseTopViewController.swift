@@ -21,7 +21,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
     
     //季節のカードデータ
     let cardName: Array<String>! = ["春のカード\nSpring", "夏のカード\nSummer", "秋のカード\nAutumn", "冬のカード\nWinter", "通年のカード\nAll year around"];
-    let cardImgName: Array<String>! = ["img/あんみつ.png", "img/あんみつ.png", "img/あんみつ.png", "img/あんみつ.png", "img/あんみつ.png"];
+    let cardImgName: Array<String>! = ["img/さんしょくだんご.png", "img/あんみつ.png", "img/だいがくいも.png", "img/まめだいふく.png", "img/たいやき.png"];
     
     var modalView: UIView!;
     var searchTextLabel: UILabel!;
@@ -204,7 +204,7 @@ class DataBaseTopViewController: UIViewController, UISearchBarDelegate, UITabBar
                     let cardImgName = "img/" + (row["illust"]?.asString()!)!;
                     let seasonTag = row["season"]?.asInt()!;
                     
-                    let cardView: Card = Card(name: cardName! + "\n" + cardEnName!, imgName: cardImgName, season: seasonTag!, id: cardId);
+                    let cardView: Card = Card(name: cardName! + "\n" + cardEnName!, imgName: cardImgName, season: seasonTag! - 1, id: cardId);
                     
                     listView.addSubview(cardView);
                     searchCards.append(cardView);
